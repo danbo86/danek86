@@ -24,20 +24,19 @@ export default function Home() {
           
           <div className="btn-box">
             <div className="zello-opis">
-              <p>Zapraszam na kanał Zello: Trading Hyde Park</p>
+              <p>Zapraszam na kanał Zello: <br />Trading Hyde Park</p>
             </div>
-            <Link 
-              href='https://zello.page/1699RDooJt7WL9ff7' 
-              className="">
-                <img src="/icons/zello.png" alt="logo-zello" className="ikona-zello"/>
+            <div className="zello-box">
+              <Link 
+                href='https://zello.page/1699RDooJt7WL9ff7' 
+                className="link-zello">
+                  <img src="/icons/zello.png"       alt="logo-zello"  className="ikona-zello"/>
             </Link>
+            </div>
           </div>
         </div>
 
-        <div className="home-imgHover">
-          
-        </div>
-          
+       
       
       </section>
       

@@ -1,4 +1,3 @@
-import moment from 'moment';
 
 
 async function getPodsumowanie() {
@@ -24,11 +23,22 @@ export default async function Podsumowanie() {
     const maksymalnaWartosc = 1000000;
     const procent = obliczProcent(stanKonta, maksymalnaWartosc);
 
-    console.log(procent)
+ 
 
+   
+
+    const dataWejsciowa = wyniki.accounts[1].lastUpdateDate
+
+    // Rozdzielamy datę na części
+    const [dataCzas, godzinaMinuta] = dataWejsciowa.split(' ');
+    const [miesiac, dzien, rok] = dataCzas.split('/');
+    const [godzina, minuta] = godzinaMinuta.split(':');
+
+    // Tworzymy datę w nowym formacie
+    const dataWyjsciowa = `${dzien}-${miesiac}-${rok} ${godzina}:${minuta}`;
+
+   
     
-
-
 
   return (
     <>
@@ -72,7 +82,7 @@ export default async function Podsumowanie() {
               </div>
               
               <div className="progres">
-                <h3>Aktualizacja na dzień: <span>{moment(wyniki.accounts[1].lastUpdateDate).format("DD-MM-YYYY HH:mm")}</span></h3>
+                <h3>Aktualizacja na dzień: <span>{dataWyjsciowa}</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
 

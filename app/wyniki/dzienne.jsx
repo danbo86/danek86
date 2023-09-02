@@ -1,7 +1,4 @@
 
-import moment from 'moment';
-
-
 async function getDzienne() {
     const res = await fetch('https://www.myfxbook.com/api/get-data-daily.json?session=CVNg8fsx4UoiyVxlqPdM3345123&id=10370842&start=2023-07-20&end=2024-01-01',{
         next: {
@@ -21,16 +18,21 @@ export default async function Dzienne() {
 
   const lastIndex = wyniki.dataDaily.length -1
   
-  console.log(wyniki.dataDaily[0][0].date)
+
   
   const stankonta = wyniki.dataDaily[lastIndex][0].balance
   const zyskdzisiaj = wyniki.dataDaily[lastIndex][0].profit
   const pipsy = wyniki.dataDaily[lastIndex][0].pips
   const obrot = wyniki.dataDaily[lastIndex][0].lots
-  // const dzien = wyniki.dataDaily[lastIndex][0].date
-  const dzien = moment(wyniki.dataDaily[lastIndex][0].date).format("DD-MM-YYYY")
+ 
+
+  const dataWejsciowa = wyniki.dataDaily[lastIndex][0].date;
+
+  // Przekształcenie daty z formatu "miesiąc-dzień-rok" na "DD-MM-YYYY"
+  const [miesiac, dzien, rok] = dataWejsciowa.split("/");
+  const dataWyjsciowa = `${dzien}-${miesiac}-${rok}`;
   
-  
+
 
 
 
@@ -63,7 +65,7 @@ export default async function Dzienne() {
               </div>
               
               <div className="progres">
-                <h3>Wynik w dniu: <span>{dzien}</span></h3>
+                <h3>Wynik w dniu: <span>{dataWyjsciowa}</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
 

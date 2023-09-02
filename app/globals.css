@@ -296,9 +296,9 @@ transform: rotate(135deg);
   transition:  .5s;
 } 
 
- /* .btn-box .btn:hover::before {
+  .btn-box .btn:hover::before {
   width: 100%;
-}  */
+}  
 
 .home-sci {
   position: absolute;

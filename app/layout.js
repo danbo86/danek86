@@ -3,8 +3,6 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import Footer from '../components/Footer'
 
-import { StrictMode } from 'react';
-
 
 
 
@@ -22,11 +20,11 @@ export default function RootLayout({ children }) {
   return (
   
     <html lang="pl">
-      {/* <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> */}
        
         <body className={inter.className}>
           
           <Nav></Nav>
+    
           {children}
           <Footer></Footer>
         </body>

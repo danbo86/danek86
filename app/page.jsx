@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo odit commodi tempora nostrum, accusamus, omnis atque aut, nemo recusandae laudantium totam saepe consequatur ipsum inventore? Aut eaque dicta cumque tenetur!
+        Witaj​ na moim blogu! Jestem pasjonatem rynku forex i chciałbym Cię serdecznie przywitać. jest to miejsce w którym dzielę się moimi doświadczeniami, analizami rynkowymi i wynikami inwestycji. Zapraszam do śledzenia śledzenie wpisów i dołączenia do naszej społeczności traderów!"  
           </p>
           
           <div className="btn-box">

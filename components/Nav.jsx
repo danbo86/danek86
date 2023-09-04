@@ -9,6 +9,7 @@ export default function Nav() {
 
 
   const [menuOpen, setMenuOpen] = useState(false)
+  const [mainMenu, setmainMenu] = useState(false)
   const [scrolling, setScrolling] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -22,6 +23,9 @@ export default function Nav() {
 
     const handleClick = () => {
         setMenuOpen(!menuOpen)
+    }
+    const handleClickreset = () => {
+        setMenuOpen(false)
     }
 
     useEffect(() => {
@@ -46,7 +50,7 @@ export default function Nav() {
     return (
       <header className={`header ${scrolling ? 'scroling' : ''}`} id="top">
 
-        <Link href='/' className={`logo ${activeSection === '' ? '' : ''}`} onClick={() => handleSectionChange('')} >Danbo86</Link>
+        <Link href='/' className={`logo ${activeSection === '' ? '' : ''}`} onClick={handleClickreset} >Danbo86</Link>
 
         <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={handleClick} >
                     <span className="bar"></span>

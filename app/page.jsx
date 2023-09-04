@@ -24,9 +24,7 @@ export default function Home() {
             <h3> Hazardzista</h3>
           </div>
           
-          <p>
-        Witaj​ na moim blogu! Jestem pasjonatem rynku forex i chciałbym Cię serdecznie przywitać. jest to miejsce w którym dzielę się moimi doświadczeniami, analizami rynkowymi i wynikami inwestycji. Zapraszam do śledzenia śledzenie wpisów i dołączenia do naszej społeczności traderów!"  
-          </p>
+          <p>Witaj na moim blogu! Jestem pasjonatem rynku forex i chciałbym Cię serdecznie przywitać. Jest to miejsce w którym dzielę się moimi doświadczeniami, analizami rynkowymi i wynikami inwestycji. Zapraszam do śledzenia wpisów i dołączenia do naszej społeczności traderów!</p>
           
           <div className="btn-box">
             <div className="zello-opis">

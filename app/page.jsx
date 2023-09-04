@@ -14,10 +14,16 @@ export default function Home() {
     
       <section className="home" id="home">
         <div className="home-content">
-          <h1>Cześć, nazywam się <span>Danbo86</span></h1>
+
+          <h1>Cześć, <br />nazywam się <span>Danbo86</span></h1>
+          
           <div className="text-animate">
-            <h3> Trader Spekulant Hazardzista</h3>
+            {/* <h3> Trader Spekulant Hazardzista</h3> */}
+            <h3> Trader</h3>
+            <h3> Spekulant</h3>
+            <h3> Hazardzista</h3>
           </div>
+          
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo odit commodi tempora nostrum, accusamus, omnis atque aut, nemo recusandae laudantium totam saepe consequatur ipsum inventore? Aut eaque dicta cumque tenetur!
           </p>
@@ -34,6 +40,7 @@ export default function Home() {
             </Link>
             </div>
           </div>
+
         </div>
 
        

@@ -13,19 +13,26 @@ export default function Nav() {
   const [scrolling, setScrolling] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-    //  Funkcja do obsługi zmiany aktywnej sekcji
-    const handleSectionChange = (section) => {
+  
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+    
+  }
+  
+  const handleClick = (section) => {
+    setMenuOpen(!menuOpen)
+    handleSectionChange(section)
+   
+  
+  }
+  //  Funkcja do obsługi zmiany aktywnej sekcji i koloru active
+  const handleSectionChange = (section) => {
     setActiveSection(section)}
+    // setMenuOpen(!menuOpen)
+    
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen)
-    }
-
-    const handleClick = () => {
-        setMenuOpen(!menuOpen)
-    }
-    const handleClickreset = () => {
-        setMenuOpen(false)
+  const handleClickreset = () => {
+    setMenuOpen(false)
     }
 
     useEffect(() => {
@@ -63,24 +70,24 @@ export default function Nav() {
             <Link 
               href='omnie' 
               className={activeSection === 'omnie' ? 'active' : ''} 
-              // onClick={() => handleSectionChange('omnie')}
-              onClick={handleClick}
+              onClick={() => handleClick("omnie")}
+        
               >O mnie
             </Link>
             <Link 
               href='blog'
               className={activeSection === 'blog' ? 'active' : ''}
-              onClick={handleClick}
+              onClick={() => handleClick("blog")}
               >Blog</Link>
             <Link
               href='wyniki'
               className={activeSection === 'wyniki' ? 'active' : ''}
-              onClick={handleClick}
+              onClick={() => handleClick("wyniki")}
               >Wyniki</Link>
             <Link 
               href='kontakt'
               className={activeSection === 'kontakt' ? 'active' : ''}
-              onClick={handleClick}
+              onClick={() => handleClick("kontakt")}
               >Kontakt</Link>
         </nav>
         

@@ -1,6 +1,7 @@
 
 async function getDzienne() {
-    const res = await fetch('https://www.myfxbook.com/api/get-data-daily.json?session=CVNg8fsx4UoiyVxlqPdM3345123&id=10370842&start=2023-07-20&end=2024-01-01',{
+    const apiUrl = process.env.Api_URL_dzienne
+    const res = await fetch(apiUrl,{
         next: {
             revalidate: 3600
         }

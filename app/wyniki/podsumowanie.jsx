@@ -1,7 +1,9 @@
 
 
 async function getPodsumowanie() {
-    const res = await fetch('https://www.myfxbook.com/api/get-my-accounts.json?session=CVNg8fsx4UoiyVxlqPdM3345123',{
+
+    const apiUrl = process.env.API_URL_podsumowanie
+    const res = await fetch(apiUrl,{
         next: {
             revalidate: 3600
         }

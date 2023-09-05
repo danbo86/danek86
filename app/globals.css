@@ -106,6 +106,7 @@ section {
 
 .navbar .active{
   color: var(--main-color);
+  /* color: red; */
 }
 
 

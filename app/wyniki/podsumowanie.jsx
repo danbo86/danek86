@@ -1,8 +1,9 @@
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function getPodsumowanie() {
 
-    const apiUrl = process.env.API_URL_podsumowanie
+    const apiUrl = process.env.APi_URL_podsumowanie
     const res = await fetch(apiUrl,{
         next: {
             revalidate: 3600

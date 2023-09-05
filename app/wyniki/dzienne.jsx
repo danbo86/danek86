@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 
 async function getDzienne() {
     const apiUrl = process.env.Api_URL_dzienne

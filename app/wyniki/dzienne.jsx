@@ -1,11 +1,17 @@
+
+
 import dotenv from 'dotenv';
 dotenv.config();
 
 
 
 async function getDzienne() {
-    // const apiUrl = process.env.Api_URL_dzienne
-    const res = await fetch(process.env.Api_URL_dzienne,{
+
+    const database2 = process.env.API_URL_dzienne
+
+
+
+    const res = await fetch(`${database2}`,{
         next: {
             revalidate: 3600
         }

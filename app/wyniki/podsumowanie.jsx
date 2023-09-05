@@ -3,8 +3,12 @@ dotenv.config();
 
 async function getPodsumowanie() {
 
+    const database = process.env.API_URL_podsumowanie
+
+    console.log(`To jest baza daych: ${database}`)
+
     // const apiUrl = process.env.APi_URL_podsumowanie
-    const res = await fetch(process.env.APi_URL_podsumowanie,{
+    const res = await fetch(`${database}`,{
         next: {
             revalidate: 3600
         }

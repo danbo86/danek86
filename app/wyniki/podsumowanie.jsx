@@ -3,8 +3,8 @@ dotenv.config();
 
 async function getPodsumowanie() {
 
-    const apiUrl = process.env.APi_URL_podsumowanie
-    const res = await fetch(apiUrl,{
+    // const apiUrl = process.env.APi_URL_podsumowanie
+    const res = await fetch(process.env.APi_URL_podsumowanie,{
         next: {
             revalidate: 3600
         }

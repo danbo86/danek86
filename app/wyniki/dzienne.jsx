@@ -4,8 +4,8 @@ dotenv.config();
 
 
 async function getDzienne() {
-    const apiUrl = process.env.Api_URL_dzienne
-    const res = await fetch(apiUrl,{
+    // const apiUrl = process.env.Api_URL_dzienne
+    const res = await fetch(process.env.Api_URL_dzienne,{
         next: {
             revalidate: 3600
         }

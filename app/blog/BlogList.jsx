@@ -5,7 +5,7 @@ import Link from "next/link";
  
  
  async function getWpisy() {
-    const res = await fetch('http://localhost:4000/wpisy', {
+    const res = await fetch('./_data/db.json', {
       next: {
         revalidate: 5
       }

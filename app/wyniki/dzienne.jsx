@@ -9,9 +9,6 @@ async function getDzienne() {
 
     const database2 = process.env.API_URL_dzienne
 
-    console.log(`To jest baza daych 2: ${database2}`)
-
-
     const res = await fetch(`${database2}`,{
         next: {
             revalidate: 3600

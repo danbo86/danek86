@@ -43,8 +43,13 @@ export default async function BlogDetails({params}) {
 
     const blog = await getBlogDetails(params.id);
 
-  return (
-    <section className="blog" id="blog">
+     // Pobierz obrazy z bazy danych (załóżmy, że są w tablicy "images")
+
+
+    
+    // console.log(blog.url)
+    return (
+      <section className="blog" id="blog">
 
     <h2 className="heading">
       Moje <span>wpisy</span>
@@ -70,15 +75,31 @@ export default async function BlogDetails({params}) {
             </div>
 
         </div>
-          <Image
+          {/* <Image
             className='img-gallery'
             src={blog.url}
             width={600}
             height={300}
             alt='obrazek'
-          />
+          /> */}
 
-        <div className="blog-column">
+       
+         
+          {blog.url.map((url, index) => (
+            <div className="blog-column">
+              <Image
+                key={index}
+                className="img-gallery"
+                src={url}
+                width={600}
+                height={300}
+                alt=""
+              />
+            </div>
+          ))}
+        
+
+        {/* <div className="blog-column">
 
             <h3 className="title">Transakcje</h3>
 
@@ -87,20 +108,17 @@ export default async function BlogDetails({params}) {
         
             <div className="blog-content">
                 
-                    <div className="content">
-                        <div className="year"><BsCalendarEvent className='kalendarz'/>2017 - 2018</div>
-                        <h3>Master degree- uniwersity</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquid. Nobis, officia deleniti. Qui explicabo illum a. Quae, expedita! Quaerat.</p>
-                        <img src={blog.images_url} alt="" />
-                    </div>
+              <div className="content">
+                  <div className="year"><BsCalendarEvent className='kalendarz'/>2017 - 2018</div>
+                  <h3>Master degree- uniwersity</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquid. Nobis, officia deleniti. Qui explicaillum a. Quae, expedita! Quaerat.</p>
+              </div>
                 
           </div>
 
-          
-
         </div>
 
-      </div>
+      </div> */}
 
 
 

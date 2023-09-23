@@ -484,8 +484,9 @@ span {
 
 .blog .blog-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 5rem;
+  flex-direction: column;
 }
 
 .blog-row .blog-column {

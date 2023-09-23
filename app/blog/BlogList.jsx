@@ -33,7 +33,7 @@ return (
                     <div className="content">
                       <div className="year"><BsCalendarEvent className='kalendarz'/>{wpis.time}</div>
                       <h3>{wpis.tytul}</h3>
-                      <p>{wpis.body}</p>
+                      <p>{wpis.body ? wpis.body.slice(0,50) : "" }...</p>
                       {/* Dodaj inne dane zgodnie z ich rzeczywistymi nazwami kluczy */}
                     </div>
                   </Link>

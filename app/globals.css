@@ -342,7 +342,10 @@ transform: rotate(135deg);
 }
 
 .zello-box {
-  display: block;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin: 1.5rem;
   padding: 1.5rem;
@@ -355,8 +358,8 @@ transform: rotate(135deg);
 
 .ikona-zello{
   display: block;
-  height: 50pt;
-  width: 50pt;
+  height: 60pt;
+  width: 60pt;
   margin: 0;
 }
 
@@ -402,6 +405,12 @@ transform: rotate(135deg);
 
 span {
   color: var(--main-color);
+}
+
+.omnietxt {
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
 }
 
 .about-img{
@@ -748,6 +757,15 @@ span {
 
 .contact form .textarea-field textarea{
   resize: none;
+}
+
+.kontakt-h3 {
+  font-size: 2rem;
+}
+
+.qr-code{
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
 }
 
 

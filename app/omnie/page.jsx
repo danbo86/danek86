@@ -13,8 +13,7 @@ export default function Omnie() {
 
         <div className="about-content">
           <h3>Trader Spekulant</h3>
-          <p> W roku 2008 wtedy zawarłem pierwszą transakcję na Eur/Usd. Pamietam jak dziś to była zyskowna pozycja. To był jedyny moment w którym mogłem powiedzieć: "jestem na plus..."
-          Od tamtej pory cały czas pod kreską, zmagam się tak naprawdę z samym sobą. Walcze już nie tylko o zysk na giełdzie... ale przede wszystkim o pokonanie "demonów", których każdy z nas zapewne na giełdzie doświadczył. </p>
+          <p className="omnietxt"> W roku 2008 zawarłem swoją pierwszą transakcję na parze walutowej EUR/USD. Pamiętam to jak dziś – była to zyskowna pozycja. To był jedyny moment, w którym mogłem powiedzieć: "Jestem na plus..." Od tamtej pory przez cały czas jestem pod kreską, walczę już nie tylko o zyski na giełdzie, ale przede wszystkim o pokonanie "demonów", które zapewne każdy z nas doświadcza na giełdzie. </p>
           <img src="" alt="" />
         </div>
 

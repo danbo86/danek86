@@ -1,7 +1,7 @@
 import { BsCalendarEvent } from 'react-icons/bs';
 import Link from "next/link";
 import BlogList from './BlogList';
-// import Staticprop from './BlogList';
+
 
 
 export default function Blog() {
@@ -24,15 +24,9 @@ export default function Blog() {
 
           </div>
 
-         
-        
-        
-           
-          
-
         </div>
 
-        <div className="blog-column">
+        {/* <div className="blog-column">
 
           <h3 className="title">Artykuły</h3>
 
@@ -40,13 +34,13 @@ export default function Blog() {
 
           
             <div className="blog-content">
-            <Link href="/" className='linek'>
-              <div className="content">
-                <div className="year"><BsCalendarEvent className='kalendarz'/>2017 - 2018</div>
-                <h3>Master degree- uniwersity</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquid. Nobis, officia deleniti. Qui explicabo illum a. Quae, expedita! Quaerat.</p>
-              </div>
-            </Link>
+              <Link href="/" className='linek'>
+                <div className="content">
+                  <div className="year"><BsCalendarEvent className='kalendarz'/>2017 - 2018</div>
+                  <h3>Master degree- uniwersity</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquid. Nobis, officia deleniti. Qui explicabo illum a. Quae, expedita! Quaerat.</p>
+                </div>
+              </Link>
             </div>
 
             <div className="blog-content">
@@ -68,9 +62,7 @@ export default function Blog() {
 
           </div>
 
-        </div>
-
-
+        </div> */}
 
       </div>
 

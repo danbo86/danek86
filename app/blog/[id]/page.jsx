@@ -35,10 +35,6 @@ async function getBlogDetails(id) {
 
     return data
 
-
-
-
-    
   }
 
 
@@ -74,18 +70,13 @@ export default async function BlogDetails({params}) {
             </div>
 
         </div>
-                   
-                    <Image
-                      className='img-gallery'
-                      src={blog.url}
-                      width={600}
-                      height={300}
-                      alt='obrazek'
-                      
-                     
-                      />
-
-
+          <Image
+            className='img-gallery'
+            src={blog.url}
+            width={600}
+            height={300}
+            alt='obrazek'
+          />
 
         <div className="blog-column">
 

@@ -13,7 +13,8 @@ export default function Omnie() {
 
         <div className="about-content">
           <h3>Trader Spekulant</h3>
-          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium modi eligendi doloribus dolores quia eveniet quae tempore! Enim, exercitationem soluta laudantium maxime mollitia cumque placeat numquam repellendus sint rem, illo quos eius, dolores voluptatibus ea animi ipsum dicta ratione? Nemo dolores officia inventore sequi corrupti dolorem fugiat, expedita aspernatur distinctio.</p>
+          <p> W roku 2008 wtedy zawarłem pierwszą transakcję na Eur/Usd. Pamietam jak dziś to była zyskowna pozycja. To był jedyny moment w którym mogłem powiedzieć: "jestem na plus..."
+          Od tamtej pory cały czas pod kreską, zmagam się tak naprawdę z samym sobą. Walcze już nie tylko o zysk na giełdzie... ale przede wszystkim o pokonanie "demonów", których każdy z nas zapewne na giełdzie doświadczył. </p>
           <img src="" alt="" />
         </div>
 

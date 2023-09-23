@@ -33,6 +33,7 @@ export default function Nav() {
 
   const handleClickreset = () => {
     setMenuOpen(false)
+    handleSectionChange(section)
     }
 
     useEffect(() => {
@@ -57,7 +58,7 @@ export default function Nav() {
     return (
       <header className={`header ${scrolling ? 'scroling' : ''}`} id="top">
 
-        <Link href='/' className={`logo ${activeSection === '' ? '' : ''}`} onClick={handleClickreset} >Danbo86</Link>
+        <Link href='/' className={`logo ${activeSection === 'home' ? '' : ''}`} onClick={handleClickreset} >Danbo86</Link>
 
         <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={handleClick} >
                     <span className="bar"></span>
@@ -68,24 +69,24 @@ export default function Nav() {
         <nav className={`navbar ${menuOpen ? 'active-mb-menu' : ''}`} >
            
             <Link 
-              href='omnie' 
+              href='/omnie' 
               className={activeSection === 'omnie' ? 'active' : ''} 
               onClick={() => handleClick("omnie")}
         
               >O mnie
             </Link>
             <Link 
-              href='blog'
+              href='/blog'
               className={activeSection === 'blog' ? 'active' : ''}
               onClick={() => handleClick("blog")}
               >Blog</Link>
             <Link
-              href='wyniki'
+              href='/wyniki'
               className={activeSection === 'wyniki' ? 'active' : ''}
               onClick={() => handleClick("wyniki")}
               >Wyniki</Link>
             <Link 
-              href='kontakt'
+              href='/kontakt'
               className={activeSection === 'kontakt' ? 'active' : ''}
               onClick={() => handleClick("kontakt")}
               >Kontakt</Link>

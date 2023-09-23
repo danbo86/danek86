@@ -1,46 +1,49 @@
+import Link from 'next/link'
+import { use} from "react"
 import { BsCalendarEvent } from 'react-icons/bs';
+import { supabase } from '../api/supabaseClient';
 
-import Link from "next/link";
+async function getBlogList() {
 
- 
- 
- async function getWpisy() {
-    const res = await fetch('http://localhost:4000/wpisy', {
-      next: {
-        revalidate: 5
+    let {data, error} = await supabase
+      .from('smoothies')
+      .select('')
+
+      if (data) {
+        // data.json()
+        console.log(data)
       }
-    })
-    // const res = await fetch('./_data/db.json')
-    
-    return res.json()
+
+      if (error) {error.message}
+
+      return data
 }
 
 export default async function BlogList() {
 
-    const wpisy = await getWpisy()
-    console.log(wpisy)
+  const allwpisy = await getBlogList()
 
 
-  return (
-   <>
-    {wpisy.map((wpis) => (
-    <div key={wpis.id} className="blog-box">
-      <div  className="blog-content">
-        <Link href='/' className='linek'>
-          <div className="content">
-            <div className="year"><BsCalendarEvent className='kalendarz'/>{wpis.data}</div>
-            <h3>{wpis.title}</h3>
-            <p>{wpis.body.slice(0,150)}...</p>
-          </div>
-        </Link>
-      </div>
-    </div>
-    ))}
-    {wpisy.length === 0 && (
-        <p>Nie ma narazie żadnych wpisów</p>
-       
-    ) }
-   
-   </>
-  )
+return (
+          <>
+            {allwpisy ? (
+              allwpisy.map(wpis => (
+                <div className="blog-content" key={wpis.id}>
+                  <Link href={`/blog/${wpis.id}`} className='linek'>
+                    <div className="content">
+                      <div className="year"><BsCalendarEvent className='kalendarz'/>{wpis.time}</div>
+                      <h3>{wpis.tytul}</h3>
+                      <p>{wpis.body}</p>
+                      {/* Dodaj inne dane zgodnie z ich rzeczywistymi nazwami kluczy */}
+                    </div>
+                  </Link>
+                </div>
+                
+              ))
+              ) : (
+                <p>Brak danych do wyświetlenia.</p>
+                )}
+          </>
+        )
+  
 }

@@ -58,6 +58,13 @@ section {
   padding: 10rem 9% 2rem;
 }
 
+.img-gallery {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+}
+
 
 
 

@@ -14,7 +14,7 @@ async function getDzienne() {
             revalidate: 3600
         }
     })
-    console.log(res)
+  
 
     return res.json()
   }

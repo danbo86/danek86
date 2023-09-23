@@ -1,6 +1,8 @@
 import { BsCalendarEvent } from 'react-icons/bs';
 import Link from "next/link";
-import BlogList from'./BlogList.jsx'
+import BlogList from './BlogList';
+// import Staticprop from './BlogList';
+
 
 export default function Blog() {
   return (
@@ -16,9 +18,14 @@ export default function Blog() {
 
           <h3 className="title">Blog</h3>
 
-         
+          <div className="blog-box">
 
-            <BlogList/>
+          <BlogList/>
+
+          </div>
+
+         
+        
         
            
           

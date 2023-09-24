@@ -20,9 +20,6 @@ export async function genereteMetadata({params}) {
 }
 
 async function getBlogDetails(id) {
-    // return await ( await fetch("http://localhost:4000/wpisy/" + id ,{
-    //     next: {revalidate: 60}
-    // })).json();
 
     const {data} = await supabase.from('smoothies')
       .select()
@@ -30,7 +27,7 @@ async function getBlogDetails(id) {
       .single()
 
     if (!data){
-      console.error
+      console.log('No blog details')
     }
 
     return data
@@ -43,11 +40,12 @@ export default async function BlogDetails({params}) {
 
     const blog = await getBlogDetails(params.id);
 
-     // Pobierz obrazy z bazy danych (załóżmy, że są w tablicy "images")
+    console.log(blog.url.map((url, index) => (
 
+    {url}
+     
+    )))
 
-    
-    // console.log(blog.url)
     return (
       <section className="blog" id="blog">
 
@@ -58,8 +56,6 @@ export default async function BlogDetails({params}) {
     <div className="blog-row">
 
         <div className="blog-column">
-
-            {/* <h3 className="title">{blog.title}</h3> */}
 
             <div className="blog-box">
 
@@ -75,18 +71,9 @@ export default async function BlogDetails({params}) {
             </div>
 
         </div>
-          {/* <Image
-            className='img-gallery'
-            src={blog.url}
-            width={600}
-            height={300}
-            alt='obrazek'
-          /> */}
-
-       
          
           {blog.url.map((url, index) => (
-            <div className="blog-column">
+            <div className="blog-column" key={index}>
               <Image
                 key={index}
                 className="img-gallery"

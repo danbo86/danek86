@@ -40,7 +40,7 @@ export default async function BlogDetails({params}) {
 
     const blog = await getBlogDetails(params.id);
 
-    console.log(blog.url.map((url, index) => (
+    console.log(blog.url.map((url) => (
 
     {url}
      
@@ -72,7 +72,7 @@ export default async function BlogDetails({params}) {
 
         </div>
          
-          {blog.url.map((url, index) => (
+          {Array.isArray(blog.url) && blog.url.map((url, index) => (
             <div className="blog-column" key={index}>
               <Image
                 key={index}

@@ -1,6 +1,6 @@
 
 import { BsCalendarEvent } from 'react-icons/bs';
-import { notFound } from "next/navigation"
+// import { notFound } from "next/navigation"
 import { supabase } from '@/app/api/supabaseClient';
 import Image from 'next/image'
 
@@ -30,7 +30,7 @@ async function getBlogDetails(id) {
       .single()
 
     if (!data){
-      notFound()
+      console.error
     }
 
     return data

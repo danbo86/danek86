@@ -24,6 +24,7 @@ export default async function Podsumowanie() {
     const stanKonta = wyniki.accounts[1].balance;
 
 
+
     const obliczProcent = (obecnaWartosc, maxWartosc) => {
       return (obecnaWartosc / maxWartosc) * 100;
     };
@@ -79,12 +80,12 @@ export default async function Podsumowanie() {
               </div>
 
               <div className="progres">
-                <h3>Zysk % <span>{wyniki.accounts[1].absGain}</span></h3>
+                <h3>Zysk % <span>{wyniki.accounts[1].absGain} %</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
 
               <div className="progres">
-                <h3>Zysk w Usd<span>{wyniki.accounts[1].profit}</span></h3>
+                <h3>Zysk w Usd<span>{wyniki.accounts[1].profit} USD</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
               

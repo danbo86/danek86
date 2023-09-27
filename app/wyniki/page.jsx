@@ -2,6 +2,8 @@
 import Podsumowanie from '../wyniki/podsumowanie.jsx' 
 import Dzienne from '../wyniki/dzienne.jsx' 
 
+import Widget from '@/components/Widget.jsx'
+
 export default function Wyniki() {
   return (
     <section className="wyniki" id="wyniki">
@@ -46,9 +48,22 @@ export default function Wyniki() {
         {<Podsumowanie/>}
 
         {<Dzienne/>}
+
+    
         
 
       </div>
+      
+      
+      <div className='wyniki-row'>
+      
+        <div className="wyniki-column">
+          {<Widget/>}
+        </div>
+
+      </div>
+
+
      
       
     </section>

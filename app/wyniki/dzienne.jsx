@@ -1,7 +1,8 @@
 
-
+import ProcentDzienny from "@/components/ProcentDzienny"
 import dotenv from 'dotenv';
 dotenv.config();
+
 
 
 
@@ -26,7 +27,12 @@ export default async function Dzienne() {
 
   const wyniki = await getDzienne()
 
-  const lastIndex = wyniki.dataDaily.length -1
+  const lastIndex = wyniki.dataDaily.length - 1;
+
+  // console.log(lastIndex)
+
+
+  
   
 
   
@@ -60,7 +66,12 @@ export default async function Dzienne() {
               </div>
 
               <div className="progres">
-                <h3>Zysk dzisiaj <span>{zyskdzisiaj}Usd</span></h3>
+                <h3>Zysk dzisiaj <span>{zyskdzisiaj} Usd</span></h3>
+                <div className="wyniki-bar"><span></span></div>
+              </div>
+
+              <div className="progres">
+                <h3>Wynik procentowy  <span>{<ProcentDzienny/>}</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
 
@@ -78,6 +89,7 @@ export default async function Dzienne() {
                 <h3>Wynik w dniu: <span>{dataWyjsciowa}</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
+              
 
             </div>
           </div>

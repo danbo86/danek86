@@ -11,7 +11,7 @@ async function getProcentDzienny() {
 
     const res = await fetch(`${database2}`,{
         next: {
-            revalidate: 3600
+            revalidate: 900
         }
     })
   

@@ -10,7 +10,7 @@ async function getPodsumowanie() {
     // const apiUrl = process.env.APi_URL_podsumowanie
     const res = await fetch(`${database}`,{
         next: {
-            revalidate: 3600
+            revalidate: 900
         }
     })
 

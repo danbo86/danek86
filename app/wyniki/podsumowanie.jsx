@@ -70,12 +70,12 @@ export default async function Podsumowanie() {
               </div>
 
               <div className="progres">
-                <h3>Suma wpłat <span>{wyniki.accounts[1].deposits}</span></h3>
+                <h3>Suma wpłat <span>{wyniki.accounts[1].deposits} USD</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
               
               <div className="progres">
-                <h3>Suma wypłat <span>{wyniki.accounts[1].withdrawals}</span></h3>
+                <h3>Suma wypłat <span>{wyniki.accounts[1].withdrawals} USD</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
 

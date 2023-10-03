@@ -29,9 +29,8 @@ export default async function Dzienne() {
 
   const lastIndex = wyniki.dataDaily.length - 1;
 
-  // console.log(lastIndex)
-
-
+  
+ 
   
   
 
@@ -40,6 +39,15 @@ export default async function Dzienne() {
   const zyskdzisiaj = wyniki.dataDaily[lastIndex][0].profit
   const pipsy = wyniki.dataDaily[lastIndex][0].pips
   const obrot = wyniki.dataDaily[lastIndex][0].lots
+
+  const bilansPoczatkowy = stankonta - zyskdzisiaj
+  const procentowyWynik = ((stankonta - bilansPoczatkowy) / Math.abs(bilansPoczatkowy)) * 100
+  const procentowyWynik2 = procentowyWynik.toFixed(2)
+ 
+  console.log(bilansPoczatkowy)
+  console.log(procentowyWynik)
+  console.log(procentowyWynik2)
+
  
 
   const dataWejsciowa = wyniki.dataDaily[lastIndex][0].date;
@@ -71,7 +79,7 @@ export default async function Dzienne() {
               </div>
 
               <div className="progres">
-                <h3>Wynik procentowy  <span>{<ProcentDzienny/>}</span></h3>
+                <h3>Wynik procentowy  <span>{procentowyWynik2} %</span></h3>
                 <div className="wyniki-bar"><span></span></div>
               </div>
 

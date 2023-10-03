@@ -40,13 +40,14 @@ export default async function Dzienne() {
   const pipsy = wyniki.dataDaily[lastIndex][0].pips
   const obrot = wyniki.dataDaily[lastIndex][0].lots
 
+  // wynik procentowy obliczanie
   const bilansPoczatkowy = stankonta - zyskdzisiaj
   const procentowyWynik = ((stankonta - bilansPoczatkowy) / Math.abs(bilansPoczatkowy)) * 100
   const procentowyWynik2 = procentowyWynik.toFixed(2)
  
-  console.log(bilansPoczatkowy)
-  console.log(procentowyWynik)
-  console.log(procentowyWynik2)
+  // console.log(bilansPoczatkowy)
+  // console.log(procentowyWynik)
+  // console.log(procentowyWynik2)
 
  
 

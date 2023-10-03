@@ -11,9 +11,6 @@ export default function Wyniki() {
       <h2 className="heading">Moje <span>wyniki</span></h2>
 
       <div className="wyniki-row">
-
-        
-
         {/* <div className="wyniki-column">
 
           <h3 className="title">Podsumowanie dzienne</h3>
@@ -48,10 +45,6 @@ export default function Wyniki() {
         {<Podsumowanie/>}
 
         {<Dzienne/>}
-
-    
-        
-
       </div>
       
       

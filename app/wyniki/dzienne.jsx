@@ -16,7 +16,6 @@ async function getDzienne() {
         }
     })
   
-
     return res.json()
   }
 

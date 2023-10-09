@@ -73,7 +73,7 @@ const options = {
         data: profits2,
        
         borderColor: '#DC143C',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        backgroundColor: 'rgba(255, 99, 132, 0.45)',
       },
       // {
       //   label: 'Dataset 2',

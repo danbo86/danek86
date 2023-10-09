@@ -8,7 +8,6 @@ const getswap = async () => {
         .from('transakcje')
         .select('Swap')
       if ( swap ) {
-        // console.log(transakcje)
         return swap
       }
     }   
@@ -38,24 +37,6 @@ const getTransakcje = async () => {
 
     const alltransakcje = await getTransakcje()
     const allswap = await getswap()
-  
-    // console.log(alltransakcje.map( profit => profit.Profit))
-    // console.log(allswap.map( profit => profit.Swap))
-
-    // w tej funkcji musze jeszcze dodać swapy do profitu z bazy danych 
-  //   function skumulowanyProfit(){
-
-  //     let cumulativeProfit = 0;
-
-  //     const Profity = alltransakcje.map( (profit) => {
-
-  //       cumulativeProfit += profit.Profit
-
-  //       return cumulativeProfit
-  //     }
-  //  )
-  //         return Profity
-  //   }
 
       // Sprawdzenie, czy obie tablice mają taką samą długość
   if (alltransakcje.length === allswap.length) {

@@ -39,6 +39,8 @@ const WykresApp = ({profits2}) => {
  
 const options = {
     responsive: true,
+    // maintainAspectRatio: false, // Wyłącz zachowanie proporcji
+    aspectRatio: 1.2, // Ustal dowolny stosunek szerokości do wysokości
     plugins: {
       legend: {
         position: 'top',

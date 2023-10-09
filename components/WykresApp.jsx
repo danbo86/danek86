@@ -44,7 +44,7 @@ const options = {
         position: 'top',
         labels: {
           font: {
-            size: 20
+            size: 21
           }
         }
       },

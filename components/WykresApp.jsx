@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -32,6 +33,49 @@ ChartJS.register(
 const WykresApp = ({profits2}) => {
   // Przygotuj dane do wykresu
 
+  const [aspectRatio, setAspectRatio] = useState(1); // Domyślny aspect ratio
+
+  // // Funkcja do ustawiania aspect ratio w zależności od szerokości ekranu
+  // const setAspectRatioByScreenWidth = () => {
+  //   if (window.innerWidth <= 600) {
+  //     // Dla małych ekranów
+  //     setAspectRatio(1.4); // Ustaw odpowiedni aspect ratio dla małych ekranów
+  //   } else {
+  //     // Dla dużych ekranów
+  //     setAspectRatio(2); // Ustaw odpowiedni aspect ratio dla dużych ekranów
+  //   }
+  // };
+
+  // // Wywołaj funkcję przy załadowaniu komponentu i zmianie szerokości ekranu
+  // useLayoutEffect(() => {
+  //   setAspectRatioByScreenWidth();
+  //   window.addEventListener('resize', setAspectRatioByScreenWidth);
+  //   return () => {
+  //     window.removeEventListener('resize', setAspectRatioByScreenWidth);
+  //   };
+  // }, []);
+
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 600) {
+        setAspectRatio(1); // Dla małych ekranów
+      } else {
+        setAspectRatio(3); // Dla dużych ekranów
+      }
+    };
+
+    handleResize(); // Wywołaj raz przy załadowaniu komponentu
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
 
 
 
@@ -40,7 +84,7 @@ const WykresApp = ({profits2}) => {
 const options = {
     responsive: true,
     // maintainAspectRatio: false, // Wyłącz zachowanie proporcji
-    aspectRatio: 1.2, // Ustal dowolny stosunek szerokości do wysokości
+    aspectRatio: aspectRatio, // Ustal dowolny stosunek szerokości do wysokości
     plugins: {
       legend: {
         position: 'top',
@@ -70,20 +114,12 @@ const options = {
     labels,
     datasets: [
       {
-        label: '',
-        // data: labels.map(() => faker.number.int({ min: -100, max: 100 })),
+        label: 'profit',
         data: profits2,
        
         borderColor: '#DC143C',
         backgroundColor: 'rgba(255, 99, 132, 0.45)',
-      },
-      // {
-      //   label: 'Dataset 2',
-      //   // data: labels.map(() => faker.number.int({ min: -50, max: 50 })),
-      //   // data: labels,
-      //   borderColor: 'rgb(53, 162, 235)',
-      //   backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      // },
+      }
     ],
   };
 

@@ -1,9 +1,8 @@
 // 'use client'
 import Podsumowanie from '../wyniki/podsumowanie.jsx' 
 import Dzienne from '../wyniki/dzienne.jsx' 
-import Wykres from '@/components/Wykres.jsx'
-
 import Widget from '@/components/Widget.jsx'
+import ListProfits from '@/components/ListProfits.jsx'
 
 export default function Wyniki() {
   return (
@@ -34,7 +33,7 @@ export default function Wyniki() {
       
         <div className="wyniki-column">
           
-          {<Wykres/>}
+          {<ListProfits/>}
          
         </div>
 

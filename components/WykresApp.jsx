@@ -60,9 +60,9 @@ const WykresApp = ({profits2}) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 600) {
-        setAspectRatio(1); // Dla małych ekranów
+        setAspectRatio(1.4); // Dla małych ekranów
       } else {
-        setAspectRatio(3); // Dla dużych ekranów
+        setAspectRatio(2); // Dla dużych ekranów
       }
     };
 

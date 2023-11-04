@@ -3,7 +3,6 @@ import Podsumowanie from '../wyniki/podsumowanie.jsx'
 import Dzienne from '../wyniki/dzienne.jsx' 
 import Widget from '@/components/Widget.jsx'
 import ListProfits from '@/components/ListProfits.jsx'
-import WykresApex from '@/components/WykresApex.jsx'
 
 export default function Wyniki() {
   return (
@@ -30,15 +29,6 @@ export default function Wyniki() {
 
       </div>
 
-      <div className='wyniki-row'>
-      
-        <div className="wyniki-column">
-          
-          {<ListProfits/>}
-         
-        </div>
-
-      </div>
       <div className='wyniki-row'>
       
         <div className="wyniki-column">

@@ -1,151 +1,142 @@
-'use client'
-import React from 'react';
-import { useEffect, useState } from 'react'
-import { Line } from 'react-chartjs-2';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
+// 'use client'
+// import React from 'react';
+// import { useEffect, useState } from 'react'
+// import { Line } from 'react-chartjs-2';
+// import {
+//     Chart as ChartJS,
+//     CategoryScale,
+//     LinearScale,
+//     PointElement,
+//     LineElement,
+//     Title,
+//     Tooltip,
+//     Legend,
+//   } from 'chart.js';
 
 
 
 
   
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-  );
+// ChartJS.register(
+//     CategoryScale,
+//     LinearScale,
+//     PointElement,
+//     LineElement,
+//     Title,
+//     Tooltip,
+//     Legend
+//   );
 
 
 
 
-const WykresApp = ({profits2}) => {
-  // Przygotuj dane do wykresu
+// const WykresApp = ({profits2}) => {
+//   // Przygotuj dane do wykresu
 
-  const [aspectRatio, setAspectRatio] = useState(1); // Domyślny aspect ratio
+//   const [aspectRatio, setAspectRatio] = useState(1); // Domyślny aspect ratio
 
-  // // Funkcja do ustawiania aspect ratio w zależności od szerokości ekranu
-  // const setAspectRatioByScreenWidth = () => {
-  //   if (window.innerWidth <= 600) {
-  //     // Dla małych ekranów
-  //     setAspectRatio(1.4); // Ustaw odpowiedni aspect ratio dla małych ekranów
-  //   } else {
-  //     // Dla dużych ekranów
-  //     setAspectRatio(2); // Ustaw odpowiedni aspect ratio dla dużych ekranów
-  //   }
-  // };
+//   // // Funkcja do ustawiania aspect ratio w zależności od szerokości ekranu
+//   // const setAspectRatioByScreenWidth = () => {
+//   //   if (window.innerWidth <= 600) {
+//   //     // Dla małych ekranów
+//   //     setAspectRatio(1.4); // Ustaw odpowiedni aspect ratio dla małych ekranów
+//   //   } else {
+//   //     // Dla dużych ekranów
+//   //     setAspectRatio(2); // Ustaw odpowiedni aspect ratio dla dużych ekranów
+//   //   }
+//   // };
 
-  // // Wywołaj funkcję przy załadowaniu komponentu i zmianie szerokości ekranu
-  // useLayoutEffect(() => {
-  //   setAspectRatioByScreenWidth();
-  //   window.addEventListener('resize', setAspectRatioByScreenWidth);
-  //   return () => {
-  //     window.removeEventListener('resize', setAspectRatioByScreenWidth);
-  //   };
-  // }, []);
-
-
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 600) {
-        setAspectRatio(1); // Dla małych ekranów
-      } else {
-        setAspectRatio(2); // Dla dużych ekranów
-      }
-    };
-
-    handleResize(); // Wywołaj raz przy załadowaniu komponentu
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+//   // // Wywołaj funkcję przy załadowaniu komponentu i zmianie szerokości ekranu
+//   // useLayoutEffect(() => {
+//   //   setAspectRatioByScreenWidth();
+//   //   window.addEventListener('resize', setAspectRatioByScreenWidth);
+//   //   return () => {
+//   //     window.removeEventListener('resize', setAspectRatioByScreenWidth);
+//   //   };
+//   // }, []);
 
 
 
+//   useEffect(() => {
+//     const handleResize = () => {
+//       if (window.innerWidth <= 600) {
+//         setAspectRatio(1); // Dla małych ekranów
+//       } else {
+//         setAspectRatio(2); // Dla dużych ekranów
+//       }
+//     };
+
+//     handleResize(); // Wywołaj raz przy załadowaniu komponentu
+
+//     window.addEventListener('resize', handleResize);
+
+//     return () => {
+//       window.removeEventListener('resize', handleResize);
+//     };
+//   }, []);
 
 
-  // Konfiguracja wykresu
+
+
+
+//   // Konfiguracja wykresu
  
-const options = {
-    responsive: true,
-    maintainAspectRatio: false, // Wyłącz zachowanie proporcji
-    aspectRatio: aspectRatio, // Ustal dowolny stosunek szerokości do wysokości
-    scales: {
-      x: {
-        type: 'linear', // Typ osi x
-      },
-      y: {
-        type: 'linear', // Typ osi y
-      }
-    },
-    plugins: {
+// const options = {
+//     responsive: true,
+//     maintainAspectRatio: false, // Wyłącz zachowanie proporcji
+//     aspectRatio: aspectRatio, // Ustal dowolny stosunek szerokości do wysokości
+//     scales: {
+//       x: {
+//         type: 'linear', // Typ osi x
+//       },
+//       y: {
+//         type: 'linear', // Typ osi y
+//       }
+//     },
+//     plugins: {
 
 
-      legend: {
-        position: 'top',
-        labels: {
-          font: {
-            size: 21
-          }
-        }
-      },
-      title: {
-        display: true,
-        text: 'Profit konta po każdej transakcji',
-        font: {
-          size: 22
-        }
-      },
-    },
+//       legend: {
+//         position: 'top',
+//         labels: {
+//           font: {
+//             size: 21
+//           }
+//         }
+//       },
+//       title: {
+//         display: true,
+//         text: 'Profit konta po każdej transakcji',
+//         font: {
+//           size: 22
+//         }
+//       }
+//     }
+//   };
 
-
-    
-
-
-  };
-
-
-  const labels = profits2.map((entry, index) => index + 1 )
+//   const labels = profits2.map((entry, index) => index + 1 )
  
+//   const data = {
+//     labels,
+//     datasets: [
+//       {
+//         label: 'stan profitu',
+//         data: profits2,
+//         borderColor: '#DC143C',
+//         backgroundColor: 'rgba(255, 99, 132, 0.45)',
+        
+//       }
+//     ],
+//   };
 
 
 
-  const data = {
-    labels,
-    datasets: [
-      {
-        label: 'stan profitu',
-        data: profits2,
-        borderColor: '#DC143C',
-        backgroundColor: 'rgba(255, 99, 132, 0.45)',
-        borderDash: [100, 1], // Dodaj kreskowaną linię
-      }
-    ],
-  };
-
-
-
-  return (
-    <div id='chart-container' className='chart-container'>
+//   return (
+//     <div id='chart-container' className='chart-container'>
       
-      <Line data={data} options={options} />
-    </div>
-  );
-};
+//       <Line data={data} options={options} />
+//     </div>
+//   );
+// };
 
-export default WykresApp;
+// export default WykresApp;

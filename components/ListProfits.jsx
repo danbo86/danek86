@@ -1,6 +1,7 @@
 // "use client"
 import { supabaseTransakcje } from '../app/api/supabaseClientTransakcje';
 import WykresApp from './WykresApp';
+import WykresApex from './WykresApex';
 
 const getswap = async () => {
     try {
@@ -35,37 +36,54 @@ const getTransakcje = async () => {
 
   export default async function ListProfits() {
 
-    const alltransakcje = await getTransakcje()
-    const allswap = await getswap()
+      const alltransakcje = await getTransakcje()
+      const allswap = await getswap()
 
-      // Sprawdzenie, czy obie tablice mają taką samą długość
-  if (alltransakcje.length === allswap.length) {
-    // Sumowanie zysków i swapów
-    const summedData = alltransakcje.map((transaction, index) => {
-      
-       // Dodawanie Swap z zaokrągleniem do dwóch miejsc po przecinku
-      const roundedSwap = allswap[index].Swap !== null ? allswap[index].Swap.toFixed(2) : null;
-      // Dodawanie Profit z zaokrągleniem do dwóch miejsc po przecinku
-      const roundedProfit = transaction.Profit  !== null ? transaction.Profit.toFixed(2) : null;
+        // Sprawdzenie, czy obie tablice mają taką samą długość
+      if (alltransakcje.length === allswap.length) {
+      // Sumowanie zysków i swapów
+      const summedData = alltransakcje.map((transaction, index) => {
+        
+        // Dodawanie Swap z zaokrągleniem do dwóch miejsc po przecinku
+        const roundedSwap = allswap[index].Swap !== null ? allswap[index].Swap.toFixed(2) : null;
+        // Dodawanie Profit z zaokrągleniem do dwóch miejsc po przecinku
+        const roundedProfit = transaction.Profit  !== null ? transaction.Profit.toFixed(2) : null;
 
-      
-      return {
-        // Profit: transaction.Profit + allswap[index].Swap,
-        Profit: (parseFloat(roundedProfit) + parseFloat(roundedSwap)),
-      };
-    });
+        
+        return {
+          // Profit: transaction.Profit + allswap[index].Swap,
+          Profit: (parseFloat(roundedProfit) + parseFloat(roundedSwap)),
+        };
+      });
 
-    // Obliczanie skumulowanego zysku
-    let cumulativeProfit = 0;
-    const skumulowanyProfity = summedData.map((transaction) => {
-      cumulativeProfit += transaction.Profit;
-      return cumulativeProfit;
-    });
+      // Obliczanie skumulowanego zysku
+      let cumulativeProfit = 0;
+      const skumulowaneProfity = summedData.map((transaction) => {
+        cumulativeProfit += transaction.Profit;
+        return(
+          
+                cumulativeProfit.toFixed(2)
 
-    // Wyświetlenie wyników
-    console.log('Suma zysków i swapów:', summedData);
-    console.log('Skumulowany zysk:', skumulowanyProfity);
+          ) 
+          
+       
+      });
 
-  return (
-    <WykresApp profits2={skumulowanyProfity}/>
-  )}}
+      // Wyświetlenie wyników
+      // console.log('Suma zysków i swapów:', summedData);
+      // console.log(skumulowaneProfity);
+
+        return (<>
+        
+
+        {/* <WykresApp profits2={skumulowaneProfity}/> */}
+        
+
+        <WykresApex profits2={skumulowaneProfity}/>
+
+
+        
+        </>
+        )
+      }
+  }

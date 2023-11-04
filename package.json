@@ -12,6 +12,7 @@
     "@faker-js/faker": "^8.1.0",
     "@supabase/auth-helpers-nextjs": "^0.8.1",
     "@supabase/supabase-js": "^2.36.0",
+    "apexcharts": "^3.44.0",
     "axios": "^1.5.1",
     "boxicons": "^2.1.4",
     "chart.js": "^3.9.1",

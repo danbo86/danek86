@@ -83,9 +83,19 @@ const WykresApp = ({profits2}) => {
  
 const options = {
     responsive: true,
-    // maintainAspectRatio: false, // Wyłącz zachowanie proporcji
+    maintainAspectRatio: false, // Wyłącz zachowanie proporcji
     aspectRatio: aspectRatio, // Ustal dowolny stosunek szerokości do wysokości
+    scales: {
+      x: {
+        type: 'linear', // Typ osi x
+      },
+      y: {
+        type: 'linear', // Typ osi y
+      }
+    },
     plugins: {
+
+
       legend: {
         position: 'top',
         labels: {
@@ -102,6 +112,11 @@ const options = {
         }
       },
     },
+
+
+    
+
+
   };
 
 
@@ -114,11 +129,11 @@ const options = {
     labels,
     datasets: [
       {
-        label: 'profit',
+        label: 'stan profitu',
         data: profits2,
-       
         borderColor: '#DC143C',
         backgroundColor: 'rgba(255, 99, 132, 0.45)',
+        borderDash: [100, 1], // Dodaj kreskowaną linię
       }
     ],
   };
@@ -126,7 +141,7 @@ const options = {
 
 
   return (
-    <div>
+    <div id='chart-container' className='chart-container'>
       
       <Line data={data} options={options} />
     </div>

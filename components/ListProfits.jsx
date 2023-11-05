@@ -1,12 +1,6 @@
-// "use client"
 import { supabaseTransakcje } from '../app/api/supabaseClientTransakcje';
-// import WykresApp from './WykresApp';
-// import WykresApex from './WykresApex';
-
 import dynamic from 'next/dynamic';
 const DynamicWykresApex = dynamic(() => import('./WykresApex'), { ssr: false });
-
-
 
 const getswap = async () => {
     try {
@@ -19,9 +13,9 @@ const getswap = async () => {
     }   
     catch (error) {
       console.log(error)
+      throw new Error(error.message);
     }
   }
-
 
 const getTransakcje = async () => {
     try {
@@ -35,9 +29,9 @@ const getTransakcje = async () => {
     }   
     catch (error) {
       console.log(error)
+      throw error
     }
   }
-
 
   export default async function ListProfits() {
 
@@ -56,7 +50,6 @@ const getTransakcje = async () => {
 
         
         return {
-          // Profit: transaction.Profit + allswap[index].Swap,
           Profit: (parseFloat(roundedProfit) + parseFloat(roundedSwap)),
         };
       });

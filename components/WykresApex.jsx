@@ -118,9 +118,6 @@ const WykresApex = ({profits2}) => {
     return (
       <div id="chart">
       <Chart options={options} series={options.series} type={options.chart.type} height={options.chart.height} />
-      <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi doloremque, eaque dicta soluta minus dolore quasi, cum alias dignissimos reprehenderit quia ipsum, totam veniam inventore!</p>
-      </div>
     </div>
     );
   } else {

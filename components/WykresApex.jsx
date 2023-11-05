@@ -4,24 +4,14 @@ import React from 'react';
 import Chart from 'react-apexcharts';
 
 const WykresApex = ({profits2}) => {
-
-    // console.log(profits2)
-    
-    // const labels = profits2.map((entry, index) => index + 1 )
-
     const chartData = profits2.map((entry, index) => ({
         x: index + 1,
         y: entry, // Wartość na osi Y
-      
       }));
 
-      const entry = chartData.map((dataPoint) => dataPoint.y
-      )
-
-
-
-      console.log(entry)
-      console.log(chartData)
+      // const entry = chartData.map((dataPoint) => dataPoint.y)
+      // console.log(entry)
+      // console.log(chartData)
   
 
 
@@ -35,7 +25,7 @@ const WykresApex = ({profits2}) => {
     chart: {
       type: 'area',
       stacked: false,
-      height: 500,
+      height: '100%',
       zoom: {
         type: 'x',
         enabled: true,
@@ -49,17 +39,20 @@ const WykresApex = ({profits2}) => {
       enabled: false,
     },
     markers: {
-      size: 0,
+      size: 0.5,
     },
     title: {
       text: 'Profit konta po każdej transakcji',
       align: 'center',
+      style: {
+        color: "#fff" // Kolor tekstu tytułu osi X (np. czerwony)
+      }
     },
     fill: {
       type: 'gradient',
       gradient: {
         shadeIntensity: 1,
-        inverseColors: false,
+        inverseColors: true,
         opacityFrom: 0.6,
         opacityTo: 0,
         stops: [0, 90, 100],
@@ -67,25 +60,53 @@ const WykresApex = ({profits2}) => {
     },
     yaxis: {
       labels: {
+        style: {
+          colors: "#00ff00" // Kolor liczb przy osi Y (np. zielony)
+        },
         formatter: function (val) {
           return (val).toFixed(2);
         },
       },
       title: {
         text: 'Profit',
+        style: {
+          color: "#fff" // Kolor tekstu tytułu osi Y 
+        }
       },
     },
     xaxis: {
+      axisTicks: {
+        show: false // Ukryj znaczniki osi X
+      },
+      axisBorder: {
+        show: false // Ukryj obramowanie osi X
+      },
+      title: {
+        text: 'Numer transakcji',
+        style: {
+          color: "#fff" // Kolor tekstu tytułu osi X
+        }
+      },
         type: 'numeric',
+        tickPlacement: 'on',
         labels: {
+          style: {
+            colors: "#00ff00" // Kolor liczb przy osi Y (np. zielony)
+          },
           formatter: function (val) {
             return val.toFixed(0); // Formatuj wartość osi X
-          },}
+          },
+        }
         
     },
 
     tooltip: {
-      shared: false,
+      theme: "dark", // Temat dymku (możesz wybrać "light" lub "dark")
+      style: {
+        fontSize: "12px", // Rozmiar czcionki w dymku
+        color: "#ff0000" // Kolor czcionki w dymku (np. czerwony)
+      },
+      shared: true,
       y: {
         formatter: function (val) {
           return (val).toFixed(2);
@@ -102,5 +123,22 @@ const WykresApex = ({profits2}) => {
 };
 
 export default WykresApex;
+
+
+
+// const Wykres = ({ profits2 }) => {
+//   if (typeof window !== 'undefined') {
+//     // Renderuj wykresy tylko w przeglądarce
+//     return (
+//       <div id="chart">
+//         {/* Renderowanie wykresów korzystających z react-apexcharts */}
+//       </div>
+//     );
+//   } else {
+//     return null;
+//   }
+// };
+
+// export default Wykres;
 
 

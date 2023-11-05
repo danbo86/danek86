@@ -18,6 +18,7 @@
   --main-color: #00abf0;
   --main-color3: #a0a796;
   --main-color4: #1f3037;
+  --wykres: #00f018;
 }
 
 
@@ -701,6 +702,17 @@ span {
   width: 100%;
   height: 100vh;
   /* background-color: rgba(149, 149, 189, 0.139); */
+}
+
+#chart{
+  height: 80vh;
+  padding: 0;
+  border: 2px solid var(--main-color);
+  border-radius: 0.9rem;
+}
+
+#chart span {
+  color: #00ff00;
 }
 
 

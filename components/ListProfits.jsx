@@ -1,6 +1,6 @@
 // "use client"
 import { supabaseTransakcje } from '../app/api/supabaseClientTransakcje';
-import WykresApp from './WykresApp';
+// import WykresApp from './WykresApp';
 import WykresApex from './WykresApex';
 
 const getswap = async () => {
@@ -79,7 +79,7 @@ const getTransakcje = async () => {
         {/* <WykresApp profits2={skumulowaneProfity}/> */}
         
 
-        <WykresApex profits2={skumulowaneProfity}/>
+        {/* <WykresApex profits2={skumulowaneProfity}/> */}
 
 
         

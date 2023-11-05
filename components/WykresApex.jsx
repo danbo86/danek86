@@ -4,8 +4,6 @@ import Chart from 'react-apexcharts';
 
 const WykresApex = ({profits2}) => {
 
-  // console.log(profits2)
-
   if (typeof window !== 'undefined') {
     // Renderuj wykresy tylko w przeglądarce
     
@@ -14,7 +12,6 @@ const WykresApex = ({profits2}) => {
     y: entry
   }));
 
-  
   const options = {
     series: [
       {
@@ -42,20 +39,22 @@ const WykresApex = ({profits2}) => {
       size: 0.5,
     },
     title: {
-      text: 'Profit konta po każdej transakcji',
+      text: 'Profit konta',
       align: 'center',
       style: {
-        color: "#fff" // Kolor tekstu tytułu osi X (np. czerwony)
+        color: "#fff",
+        fontSize: '20px' // Kolor tekstu tytułu osi X (np. czerwony)
       }
     },
+    // '#DC143C',"#00ff00"
     fill: {
       type: 'gradient',
       gradient: {
-        shadeIntensity: 1,
-        inverseColors: true,
-        opacityFrom: 0.6,
-        opacityTo: 0,
-        stops: [0, 90, 100],
+        shadeIntensity: 0.4,
+        inverseColors: false,
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 100],
       },
     },
     yaxis: {
@@ -64,7 +63,7 @@ const WykresApex = ({profits2}) => {
           colors: "#00ff00" // Kolor liczb przy osi Y (np. zielony)
         },
         formatter: function (val) {
-          return (val).toFixed(2);
+          return (val).toFixed(0);
         },
       },
       title: {
@@ -114,6 +113,15 @@ const WykresApex = ({profits2}) => {
       },
     },
   };
+
+  // Dostosuj kolory w oparciu o wartość Y
+    // options.fill.colors = [function({ value }) {
+    //   if (value < 0) {
+    //     return '#DC143C'; // Kolor dla wartości poniżej 0
+    //   } else {
+    //     return '#000555'; // Kolor dla wartości powyżej lub równych 0
+    //   }
+    // }];
 
     return (
       <div id="chart">

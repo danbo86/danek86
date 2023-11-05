@@ -10,7 +10,7 @@ async function getPodsumowanie() {
     // const apiUrl = process.env.APi_URL_podsumowanie
     const res = await fetch(`${database}`,{
         next: {
-            revalidate: 900
+            revalidate: 1800
         }
     })
 
@@ -31,12 +31,7 @@ export default async function Podsumowanie() {
     const maksymalnaWartosc = 1000000;
     const procent = obliczProcent(stanKonta, maksymalnaWartosc);
 
- 
-
-   
-
     const dataWejsciowa = wyniki.accounts[1].lastUpdateDate
-
     // Rozdzielamy datę na części
     const [dataCzas, godzinaMinuta] = dataWejsciowa.split(' ');
     const [miesiac, dzien, rok] = dataCzas.split('/');
@@ -45,12 +40,8 @@ export default async function Podsumowanie() {
     // Tworzymy datę w nowym formacie
     const dataWyjsciowa = `${dzien}-${miesiac}-${rok} ${godzina}:${minuta}`;
 
-   
-    
-
   return (
     <>
-    
     
     <div className="wyniki-column">
 

@@ -11,7 +11,7 @@ async function getBlogList() {
 
       if (data) {
         // data.json()
-        console.log(data)
+        // console.log(data)
       }
 
       if (error) {error.message}
@@ -22,7 +22,6 @@ async function getBlogList() {
 export default async function BlogList() {
 
   const allwpisy = await getBlogList()
-
 
 return (
           <>

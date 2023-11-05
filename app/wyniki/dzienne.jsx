@@ -1,10 +1,5 @@
-
-import ProcentDzienny from "@/components/ProcentDzienny"
 import dotenv from 'dotenv';
 dotenv.config();
-
-
-
 
 async function getDzienne() {
 
@@ -12,15 +7,12 @@ async function getDzienne() {
 
     const res = await fetch(`${database2}`,{
         next: {
-            revalidate: 900
+            revalidate: 1800
         }
     })
   
     return res.json()
   }
-
-
-
 
 export default async function Dzienne() {
 
@@ -28,12 +20,6 @@ export default async function Dzienne() {
 
   const lastIndex = wyniki.dataDaily.length - 1;
 
-  
- 
-  
-  
-
-  
   const stankonta = wyniki.dataDaily[lastIndex][0].balance
   const zyskdzisiaj = wyniki.dataDaily[lastIndex][0].profit
   const pipsy = wyniki.dataDaily[lastIndex][0].pips
@@ -48,18 +34,12 @@ export default async function Dzienne() {
   // console.log(procentowyWynik)
   // console.log(procentowyWynik2)
 
- 
-
   const dataWejsciowa = wyniki.dataDaily[lastIndex][0].date;
 
   // Przekształcenie daty z formatu "miesiąc-dzień-rok" na "DD-MM-YYYY"
   const [miesiac, dzien, rok] = dataWejsciowa.split("/");
   const dataWyjsciowa = `${dzien}-${miesiac}-${rok}`;
   
-
-
-
-
   return (
     <div className="wyniki-column">
 
@@ -98,7 +78,6 @@ export default async function Dzienne() {
                 <div className="wyniki-bar"><span></span></div>
               </div>
               
-
             </div>
           </div>
 

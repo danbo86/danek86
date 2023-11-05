@@ -3,21 +3,23 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 
+
+
 const WykresApex = ({profits2}) => {
-    const chartData = profits2.map((entry, index) => ({
-        x: index + 1,
-        y: entry, // Wartość na osi Y
-      }));
 
-      // const entry = chartData.map((dataPoint) => dataPoint.y)
-      // console.log(entry)
-      // console.log(chartData)
+
+  if (typeof window !== 'undefined') {
+    // Renderuj wykresy tylko w przeglądarce
+    
+  const chartData = profits2.map((entry, index) => ({
+    x: index + 1,
+    y: entry
+  }));
+
   
-
-
-    const options = {
-        series: [
-            {
+  const options = {
+    series: [
+      {
         name: "Profit",
         data: chartData
       },
@@ -98,10 +100,10 @@ const WykresApex = ({profits2}) => {
           },
         }
         
-    },
+      },
 
-    tooltip: {
-      theme: "dark", // Temat dymku (możesz wybrać "light" lub "dark")
+      tooltip: {
+        theme: "dark", // Temat dymku (możesz wybrać "light" lub "dark")
       style: {
         fontSize: "12px", // Rozmiar czcionki w dymku
         color: "#ff0000" // Kolor czcionki w dymku (np. czerwony)
@@ -115,30 +117,52 @@ const WykresApex = ({profits2}) => {
     },
   };
 
-  return (
-    <div id="chart">
+
+    return (
+      <div id="chart">
       <Chart options={options} series={options.series} type={options.chart.type} height={options.chart.height} />
     </div>
-  );
+    );
+  } else {
+    return null;
+  }
+
+
+
+
+  // const chartData = profits2.map((entry, index) => ({
+  //   x: index + 1,
+  //   y: entry
+  // }));
+  
+  // const entry = chartData.map((dataPoint) => dataPoint.y)
+  // console.log(entry)
+  // console.log(chartData)
+  
+  
+  
+  
+  
 };
 
 export default WykresApex;
 
 
 
+
 // const Wykres = ({ profits2 }) => {
-//   if (typeof window !== 'undefined') {
-//     // Renderuj wykresy tylko w przeglądarce
-//     return (
-//       <div id="chart">
-//         {/* Renderowanie wykresów korzystających z react-apexcharts */}
+  //   if (typeof window !== 'undefined') {
+    //     // Renderuj wykresy tylko w przeglądarce
+    //     return (
+      //       <div id="chart">
+      //         {/* Renderowanie wykresów korzystających z react-apexcharts */}
 //       </div>
 //     );
 //   } else {
-//     return null;
-//   }
-// };
-
-// export default Wykres;
-
-
+  //     return null;
+  //   }
+  // };
+  
+  // export default Wykres;
+  
+  

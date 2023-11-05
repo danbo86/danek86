@@ -61,29 +61,23 @@ const getTransakcje = async () => {
       const skumulowaneProfity = summedData.map((transaction) => {
         cumulativeProfit += transaction.Profit;
         return(
-          
-                cumulativeProfit.toFixed(2)
-
+          cumulativeProfit.toFixed(2)
           ) 
           
-       
-      });
-
-      // Wyświetlenie wyników
-      // console.log('Suma zysków i swapów:', summedData);
-      // console.log(skumulowaneProfity);
-
-        return (<>
+        });
         
-
-        {/* <WykresApp profits2={skumulowaneProfity}/> */}
+        // Wyświetlenie wyników
+        // console.log('Suma zysków i swapów:', summedData);
+        // console.log(skumulowaneProfity);
         
-
-        {/* <WykresApex profits2={skumulowaneProfity}/> */}
-
-
-        
-        </>
+        return(
+          <WykresApex profits2={skumulowaneProfity}/> 
         )
-      }
-  }
+        
+      };
+    }
+    
+    
+    {/* <WykresApp profits2={skumulowaneProfity}/> */}
+    
+

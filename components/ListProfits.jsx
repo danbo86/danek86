@@ -1,7 +1,12 @@
 // "use client"
 import { supabaseTransakcje } from '../app/api/supabaseClientTransakcje';
 // import WykresApp from './WykresApp';
-import WykresApex from './WykresApex';
+// import WykresApex from './WykresApex';
+
+import dynamic from 'next/dynamic';
+const DynamicWykresApex = dynamic(() => import('./WykresApex'), { ssr: false });
+
+
 
 const getswap = async () => {
     try {
@@ -63,7 +68,6 @@ const getTransakcje = async () => {
         return(
           cumulativeProfit.toFixed(2)
           ) 
-          
         });
         
         // Wyświetlenie wyników
@@ -71,13 +75,9 @@ const getTransakcje = async () => {
         // console.log(skumulowaneProfity);
         
         return(
-          <WykresApex profits2={skumulowaneProfity}/> 
-        )
-        
+          <DynamicWykresApex profits2={skumulowaneProfity}/> 
+        )   
       };
     }
-    
-    
-    {/* <WykresApp profits2={skumulowaneProfity}/> */}
     
 

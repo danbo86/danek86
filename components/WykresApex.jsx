@@ -1,11 +1,10 @@
 "use client"
-
 import React from 'react';
 import Chart from 'react-apexcharts';
 
-
-
 const WykresApex = ({profits2}) => {
+
+  // console.log(profits2)
 
 
   if (typeof window !== 'undefined') {
@@ -121,10 +120,13 @@ const WykresApex = ({profits2}) => {
     return (
       <div id="chart">
       <Chart options={options} series={options.series} type={options.chart.type} height={options.chart.height} />
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi doloremque, eaque dicta soluta minus dolore quasi, cum alias dignissimos reprehenderit quia ipsum, totam veniam inventore!</p>
+      </div>
     </div>
     );
   } else {
-    return null;
+    return ("nie można wyrenderować wykresu");
   }
 
 
@@ -146,23 +148,3 @@ const WykresApex = ({profits2}) => {
 };
 
 export default WykresApex;
-
-
-
-
-// const Wykres = ({ profits2 }) => {
-  //   if (typeof window !== 'undefined') {
-    //     // Renderuj wykresy tylko w przeglądarce
-    //     return (
-      //       <div id="chart">
-      //         {/* Renderowanie wykresów korzystających z react-apexcharts */}
-//       </div>
-//     );
-//   } else {
-  //     return null;
-  //   }
-  // };
-  
-  // export default Wykres;
-  
-  

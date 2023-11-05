@@ -6,7 +6,6 @@ const WykresApex = ({profits2}) => {
 
   // console.log(profits2)
 
-
   if (typeof window !== 'undefined') {
     // Renderuj wykresy tylko w przeglądarce
     
@@ -116,7 +115,6 @@ const WykresApex = ({profits2}) => {
     },
   };
 
-
     return (
       <div id="chart">
       <Chart options={options} series={options.series} type={options.chart.type} height={options.chart.height} />
@@ -128,23 +126,6 @@ const WykresApex = ({profits2}) => {
   } else {
     return ("nie można wyrenderować wykresu");
   }
-
-
-
-
-  // const chartData = profits2.map((entry, index) => ({
-  //   x: index + 1,
-  //   y: entry
-  // }));
-  
-  // const entry = chartData.map((dataPoint) => dataPoint.y)
-  // console.log(entry)
-  // console.log(chartData)
-  
-  
-  
-  
-  
 };
 
 export default WykresApex;

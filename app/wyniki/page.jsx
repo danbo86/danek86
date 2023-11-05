@@ -33,7 +33,7 @@ export default function Wyniki() {
       
         <div className="wyniki-column">
           
-          {<ListProfits/>}
+          {/* {<ListProfits/>} */}
          
         </div>
 

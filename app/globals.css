@@ -709,6 +709,7 @@ span {
   padding: 0;
   border: 2px solid var(--main-color);
   border-radius: 0.9rem;
+  color: #081b29;
 }
 
 #chart span {

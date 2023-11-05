@@ -1,21 +1,30 @@
 
 import { BsCalendarEvent } from 'react-icons/bs';
-// import { notFound } from "next/navigation"
 import { supabase } from '@/app/api/supabaseClient';
 import Image from 'next/image'
 
 
 export const dynamicParams = true
 
-export async function genereteMetadata({params}) {
+export async function generateMetadata({params}) {
 
   const {data: wpis } = await supabase.from('smoothies')
     .select()
     .eq('id', params.id)
-    .single()
+    .single();
+
+    
+  let title = "Danbo86";
+  if (wpis) {
+    title += ` | ${wpis.tytul}`;
+  } else {
+    title += " | Nie znaleziono";
+  }
+
 
   return {
-    title: `Danbo86 | ${wpis?.title || 'Nie znaleziono'} `
+    // title: `Danbo86 | ${wpis?.title || 'Nie znaleziono'} `
+    title
   }
 }
 
@@ -39,12 +48,6 @@ async function getBlogDetails(id) {
 export default async function BlogDetails({params}) {
 
     const blog = await getBlogDetails(params.id);
-
-    console.log(blog.url.map((url) => (
-
-    {url}
-     
-    )))
 
     return (
       <section className="blog" id="blog">
@@ -85,30 +88,6 @@ export default async function BlogDetails({params}) {
               />
             </div>
           ))}
-        
-
-        {/* <div className="blog-column">
-
-            <h3 className="title">Transakcje</h3>
-
-            <div className="blog-box">
-
-        
-            <div className="blog-content">
-                
-              <div className="content">
-                  <div className="year"><BsCalendarEvent className='kalendarz'/>2017 - 2018</div>
-                  <h3>Master degree- uniwersity</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquid. Nobis, officia deleniti. Qui explicaillum a. Quae, expedita! Quaerat.</p>
-              </div>
-                
-          </div>
-
-        </div>
-
-      </div> */}
-
-
 
     </div>
 

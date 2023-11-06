@@ -68,6 +68,7 @@ export default async function BlogDetails({params}) {
                       <div className="year"><BsCalendarEvent className='kalendarz'/>{blog.time}</div>
                       <h3>{blog.tytul}</h3>
                       <p>{blog.body}</p>
+                      <p>{blog.body1}</p>
 
                     </div>
                 </div>

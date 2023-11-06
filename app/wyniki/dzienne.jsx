@@ -18,6 +18,8 @@ export default async function Dzienne() {
 
   const wyniki = await getDzienne()
 
+  
+
   const lastIndex = wyniki.dataDaily.length - 1;
 
   const stankonta = wyniki.dataDaily[lastIndex][0].balance

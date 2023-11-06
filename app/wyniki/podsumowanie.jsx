@@ -23,6 +23,8 @@ export default async function Podsumowanie() {
     const wyniki = await getPodsumowanie();
     const stanKonta = wyniki.accounts[1].balance;
 
+    // console.log(wyniki)
+
 
 
     const obliczProcent = (obecnaWartosc, maxWartosc) => {

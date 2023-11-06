@@ -491,7 +491,7 @@ span {
 }
 
 .blog-row .blog-column {
-  flex: 1 1 40rem;
+  flex: 1 1 10rem;
 }
 
 .blog-column .title {

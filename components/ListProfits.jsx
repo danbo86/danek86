@@ -13,7 +13,7 @@ const getswap = async () => {
     }   
     catch (error) {
       console.log(error)
-      throw new Error(error.message);
+      // throw new Error(error.message);
     }
   }
 
@@ -29,7 +29,7 @@ const getTransakcje = async () => {
     }   
     catch (error) {
       console.log(error)
-      throw error
+      // throw error
     }
   }
 
@@ -37,6 +37,7 @@ const getTransakcje = async () => {
 
       const alltransakcje = await getTransakcje()
       const allswap = await getswap()
+    
 
         // Sprawdzenie, czy obie tablice mają taką samą długość
       if (alltransakcje.length === allswap.length) {

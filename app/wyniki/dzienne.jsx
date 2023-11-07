@@ -18,6 +18,8 @@ export default async function Dzienne() {
 
   const wyniki = await getDzienne()
 
+  // console.log(wyniki)
+
   
 
   const lastIndex = wyniki.dataDaily.length - 1;
@@ -35,6 +37,7 @@ export default async function Dzienne() {
   // console.log(bilansPoczatkowy)
   // console.log(procentowyWynik)
   // console.log(procentowyWynik2)
+
 
   const dataWejsciowa = wyniki.dataDaily[lastIndex][0].date;
 

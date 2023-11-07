@@ -390,7 +390,7 @@ transform: rotate(135deg);
 
 .about {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   gap: 2rem;
@@ -476,10 +476,9 @@ span {
 
 .blog {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  /* min-height: auto; */
   padding-bottom: 5rem;
 }
 

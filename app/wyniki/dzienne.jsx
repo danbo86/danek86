@@ -7,7 +7,7 @@ async function getDzienne() {
 
     const res = await fetch(`${database2}`,{
         next: {
-            revalidate: 1800
+            revalidate: 900
         }
     })
   

@@ -1,83 +1,71 @@
-
-import { BsCalendarEvent } from 'react-icons/bs';
-import { supabase } from '@/app/api/supabaseClient';
-import Image from 'next/image'
-
+import { BsCalendarEvent } from "react-icons/bs"
+import { supabase } from "@/app/api/supabaseClient"
+import Image from "next/image"
 
 export const dynamicParams = true
 
-export async function generateMetadata({params}) {
-
-  const {data: wpis } = await supabase.from('smoothies')
+export async function generateMetadata({ params }) {
+  const { data: wpis } = await supabase
+    .from("smoothies")
     .select()
-    .eq('id', params.id)
-    .single();
+    .eq("id", params.id)
+    .single()
 
-    
-  let title = "Danbo86";
+  let title = "Danbo86"
   if (wpis) {
-    title += ` | ${wpis.tytul}`;
+    title += ` | ${wpis.tytul}`
   } else {
-    title += " | Nie znaleziono";
+    title += " | Nie znaleziono"
   }
-
 
   return {
     // title: `Danbo86 | ${wpis?.title || 'Nie znaleziono'} `
-    title
+    title,
   }
 }
 
 async function getBlogDetails(id) {
+  const { data } = await supabase
+    .from("smoothies")
+    .select()
+    .eq("id", id)
+    .single()
 
-    const {data} = await supabase.from('smoothies')
-      .select()
-      .eq('id', id)
-      .single()
-
-    if (!data){
-      console.log('No blog details')
-    }
-
-    return data
-
+  if (!data) {
+    console.log("No blog details")
   }
 
+  return data
+}
 
+export default async function BlogDetails({ params }) {
+  const blog = await getBlogDetails(params.id)
 
-export default async function BlogDetails({params}) {
+  return (
+    <section className="blog" id="blog">
+      <h2 className="heading">
+        Moje <span>wpisy</span>
+      </h2>
 
-    const blog = await getBlogDetails(params.id);
-
-    return (
-      <section className="blog" id="blog">
-
-    <h2 className="heading">
-      Moje <span>wpisy</span>
-    </h2>
-
-    <div className="blog-row">
-
+      <div className="blog-row">
         <div className="blog-column">
-
-            <div className="blog-box">
-
-                <div className="blog-content">
-                    <div className="content">
-
-                      <div className="year"><BsCalendarEvent className='kalendarz'/>{blog.time}</div>
-                      <h3>{blog.tytul}</h3>
-                      <p>{blog.body}</p>
-                      <p>{blog.body1}</p>
-
-                    </div>
+          <div className="blog-box">
+            <div className="blog-content">
+              <div className="content">
+                <div className="year">
+                  <BsCalendarEvent className="kalendarz" />
+                  {blog.time}
                 </div>
-
+                <h3>{blog.tytul}</h3>
+                <p>{blog.body}</p>
+                <p>{blog.body1}</p>
+              </div>
             </div>
-
+          </div>
         </div>
-         
-          {Array.isArray(blog.url) && blog.url.map((url, index) => (
+
+        {Array.isArray(blog.url) &&
+          blog.url.map((url, index) => (
             <div className="blog-column" key={index}>
               <Image
                 key={index}
@@ -89,9 +77,7 @@ export default async function BlogDetails({params}) {
               />
             </div>
           ))}
-
-    </div>
-
-  </section>
+      </div>
+    </section>
   )
 }

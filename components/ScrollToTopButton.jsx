@@ -1,17 +1,13 @@
-'use client'
+"use client"
 
-
-import ScrollToTop from "react-scroll-to-top";
+import ScrollToTop from "react-scroll-to-top"
 
 export default function ScrollToTopButton() {
-
-    
-    return (
+  return (
     <>
-        <button>
-            <ScrollToTop/>
-        </button>
-    
+      <button>
+        <ScrollToTop />
+      </button>
     </>
-    );
+  )
 }

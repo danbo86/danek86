@@ -60,7 +60,7 @@ export default async function ListProfits() {
 
     // Wyświetlenie wyników
     // console.log('Suma zysków i swapów:', summedData);
-    console.log(skumulowaneProfity)
+    // console.log(skumulowaneProfity)
 
     return <DynamicWykresApex profits2={skumulowaneProfity} />
   }

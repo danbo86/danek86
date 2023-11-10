@@ -6,14 +6,7 @@ export default function Blog() {
       <h2 className="heading">
         Konkurs <span>Zello</span>
       </h2>
-
-      <div className="blog-row">
-        <div className="blog-column">
-          <div className="blog-box">
-            <Tabela />
-          </div>
-        </div>
-      </div>
+      <Tabela />
     </section>
   )
 }

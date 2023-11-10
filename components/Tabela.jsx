@@ -18,22 +18,22 @@ export default async function Tabela() {
   return (
     <div className="wrapper">
       <table>
-        <caption>
-            Wyniki
-        </caption>
+        <caption>Wyniki</caption>
         <thead>
           <tr>
-            <th>Nazwa</th>
+            <th>Nick</th>
             <th>Procent</th>
-            <th>Stan Konta</th>
+            <th>Balance</th>
+            <th>Equity</th>
           </tr>
         </thead>
         <tbody>
           {konkurs_dane.map((item) => (
             <tr key={item.id}>
-              <td>{item.imie}</td>
-              <td>{item.procent_all}</td>
-              <td>{item.stan_konta}</td>
+              <td data-cell="Nick">{item.imie}</td>
+              <td data-cell="Procent">{item.procent_all} %</td>
+              <td data-cell="Balance">{item.stan_konta} USD</td>
+              <td data-cell="Equity">{item.equity} USD</td>
             </tr>
           ))}
         </tbody>

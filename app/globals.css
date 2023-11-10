@@ -590,6 +590,7 @@ span {
   font-size: 1.7rem;
   display: flex;
   justify-content: space-between;
+  font-weight: 400;
 }
 
 .wyniki-content .progres h3 span {
@@ -937,10 +938,10 @@ tr:nth-of-type(2n) {
     padding: 0.5rem 1rem;
   }
 
-  td:first-child{
+  td:first-child {
     padding-top: 2rem;
   }
-  td:last-child{
+  td:last-child {
     padding-bottom: 2rem;
   }
 

@@ -89,6 +89,13 @@ export default function Nav() {
         >
           Kontakt
         </Link>
+        <Link
+          href="/konkurs_Zello"
+          className={activeSection === "kontakt" ? "active" : ""}
+          onClick={() => handleClick("konkurs_Zello")}
+        >
+          Konkurs Zello
+        </Link>
       </nav>
     </header>
   )

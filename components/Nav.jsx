@@ -91,7 +91,7 @@ export default function Nav() {
         </Link>
         <Link
           href="/konkurs_Zello"
-          className={activeSection === "kontakt" ? "active" : ""}
+          className={activeSection === "konkurs_Zello" ? "active" : ""}
           onClick={() => handleClick("konkurs_Zello")}
         >
           Konkurs Zello

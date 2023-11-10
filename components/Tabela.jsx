@@ -15,6 +15,11 @@ const konkurs = async () => {
 export default async function Tabela() {
   const konkurs_dane = await konkurs()
 
+  // Sortowanie danych według procent_all (liczby zmiennoprzecinkowe)
+  konkurs_dane.sort((a, b) => b.procent_all - a.procent_all)
+
+  console.log(konkurs_dane)
+
   return (
     <div className="wrapper">
       <table>

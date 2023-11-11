@@ -900,7 +900,7 @@ span {
     sans-serif;
   line-height: 1.5;
   border: 2px solid var(--main-color);
-  border-radius: 2%;
+  border-radius: 0.6rem;
   overflow: hidden;
 }
 

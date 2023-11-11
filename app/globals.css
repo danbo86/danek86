@@ -538,7 +538,7 @@ span {
   transform: scale(1.1) translateX(19px);
 }
 
-/* -------------- Wyniki ------------------- */
+/* ------------------------------------- Wyniki ----------------------------- */
 
 .wyniki {
   /* min-height: auto; */
@@ -583,14 +583,23 @@ span {
 }
 
 .wyniki-content .progres {
-  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--main-color);
+  margin: 1rem 0;
+  padding: 3rem;
+  align-items: center;
 }
 
 .wyniki-content .progres h3 {
-  font-size: 1.7rem;
   display: flex;
+  font-size: 1.7rem;
   justify-content: space-between;
   font-weight: 400;
+  margin: 0;
+  width: 100%;
 }
 
 .wyniki-content .progres h3 span {
@@ -603,6 +612,7 @@ span {
   border: 0.2rem solid var(--main-color);
   padding: 0.5rem;
   margin: 1rem 0;
+  display: none;
 }
 
 .wyniki-content .progres .wyniki-bar span {

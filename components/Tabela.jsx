@@ -1,6 +1,6 @@
 import { supabaseTransakcje } from "../app/api/supabaseClientTransakcje"
-const csv = require("csv-parser")
-import { createReadStream } from "node:fs"
+// const csv = require("csv-parser")
+// import { createReadStream } from "node:fs"
 import Link from "next/link"
 
 const konkurs = async () => {

@@ -555,7 +555,7 @@ span {
 }
 
 .linek:hover {
-  transform: scale(1.1) translateX(19px);
+  transform: scale(1.05) translateZ(1px);
 }
 
 /* ------------------------------------- Wyniki ----------------------------- */

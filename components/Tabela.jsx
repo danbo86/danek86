@@ -85,7 +85,7 @@ export default async function Tabela() {
                 <td data-cell="Procent">{item.procent_all} %</td>
                 <td data-cell="Balance">{item.stan_konta} USD</td>
                 <td data-cell="Equity">{item.equity} USD</td>
-                <td data-cell="Url">
+                <td data-cell="Link">
                   <Link className="link-url" target="_blank" href={item.url}>
                     Forex Factory
                   </Link>

@@ -2,18 +2,18 @@ import { supabaseTransakcje } from "../app/api/supabaseClientTransakcje"
 
 import Link from "next/link"
 
-const konkurs = async () => {
-  try {
-    let { data, error } = await supabaseTransakcje.from("konkurs").select("*")
-    if (data) {
-      return data
-    }
-  } catch (error) {
-    console.log(error)
-  }
-}
-
 export default async function Tabela() {
+  const konkurs = async () => {
+    try {
+      let { data, error } = await supabaseTransakcje.from("konkurs").select("*")
+      if (data) {
+        return data
+      }
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
   const konkurs_dane = await konkurs()
 
   // Sortowanie danych według procent_all (liczby zmiennoprzecinkowe)

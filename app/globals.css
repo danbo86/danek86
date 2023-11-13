@@ -472,6 +472,10 @@ span {
   flex-direction: column;
 }
 
+.blog-row-wpis {
+  width: 100%;
+}
+
 .blog-row .blog-column {
   flex: 1 1 10rem;
 }

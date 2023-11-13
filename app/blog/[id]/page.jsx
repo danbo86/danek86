@@ -47,7 +47,7 @@ export default async function BlogDetails({ params }) {
         Moje <span>wpisy</span>
       </h2>
 
-      <div className="blog-row">
+      <div className="blog-row-wpis">
         <div className="blog-column">
           <div className="blog-box">
             <div className="blog-content">

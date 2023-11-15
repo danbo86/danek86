@@ -5,7 +5,7 @@ import Link from "next/link"
 export default async function Tabela() {
   const konkurs = async () => {
     try {
-      let { data, error } = await supabaseTransakcje.from("konkurs").select("*")
+      let { data, error } = await supabaseTransakcje.from("wyniki").select("*")
       if (data) {
         return data
       }

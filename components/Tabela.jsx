@@ -20,6 +20,7 @@ export default async function Tabela() {
   konkurs_dane.sort((a, b) => b.procent_all - a.procent_all)
 
   console.log(konkurs_dane)
+  console.log(konkurs_dane)
 
   return (
     <>

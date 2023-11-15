@@ -1,5 +1,5 @@
 // import Tabela from "@/components/Tabela"
-import Tabela from "@/components/Tabela.jsx"
+import Tabela from "./Tabela.jsx"
 
 
 export default function Blog() {

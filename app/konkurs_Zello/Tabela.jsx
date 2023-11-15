@@ -1,4 +1,4 @@
-import { supabaseTransakcje } from "../app/api/supabaseClientTransakcje"
+import { supabaseTransakcje } from "../api/supabaseClientTransakcje"
 
 import Link from "next/link"
 

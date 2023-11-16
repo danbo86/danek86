@@ -1,32 +1,33 @@
 "use client"
-import { useEffect, useState } from "react";
-import { supabaseTransakcje } from "../api/supabaseClientTransakcje";
-import Link from "next/link";
+import { useEffect, useState } from "react"
+import { supabaseTransakcje } from "../api/supabaseClientTransakcje"
+import Link from "next/link"
 
 const Tabela = () => {
-  const [konkurs_dane, setKonkursDane] = useState([]);
+  const [konkurs_dane, setKonkursDane] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let { data, error } = await supabaseTransakcje.from("wyniki").select("*");
+        let { data, error } = await supabaseTransakcje
+          .from("wyniki")
+          .select("*")
         if (data) {
-          setKonkursDane(data);
+          setKonkursDane(data)
         }
-        console.log(data);
+        // console.log(data)
       } catch (error) {
-        console.error(error);
+        console.error(error)
       }
-    };
-    
-    fetchData();
-  }, []); // Pusta tablica dependency sprawia, że useEffect uruchamia się tylko raz po zamontowaniu komponentu
-  
+    }
+
+    fetchData()
+  }, []) // Pusta tablica dependency sprawia, że useEffect uruchamia się tylko raz po zamontowaniu komponentu
+
   // Sortowanie danych według procent_all (liczby zmiennoprzecinkowe)
-  konkurs_dane.sort((a, b) => b.procent_all - a.procent_all);
-  console.log(konkurs_dane);
-  
-  
+  konkurs_dane.sort((a, b) => b.procent_all - a.procent_all)
+  // console.log(konkurs_dane)
+
   return (
     <>
       <div className="wrapper">
@@ -34,6 +35,7 @@ const Tabela = () => {
           <caption>Wyniki</caption>
           <thead>
             <tr>
+              <th>Pozycja</th>
               <th>Nick</th>
               <th>Procent</th>
               <th>Balance</th>
@@ -42,8 +44,9 @@ const Tabela = () => {
             </tr>
           </thead>
           <tbody>
-            {konkurs_dane.map((item) => (
+            {konkurs_dane.map((item, index) => (
               <tr key={item.id}>
+                <td data-cell="Pozycja">{index + 1}</td>
                 <td data-cell="Nick">{item.imie}</td>
                 <td data-cell="Procent">{item.procent_all} %</td>
                 <td data-cell="Balance">{item.stan_konta} USD</td>
@@ -59,7 +62,7 @@ const Tabela = () => {
         </table>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Tabela;
+export default Tabela

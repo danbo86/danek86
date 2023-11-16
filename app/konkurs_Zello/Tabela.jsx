@@ -1,27 +1,32 @@
-import { supabaseTransakcje } from "../api/supabaseClientTransakcje"
+"use client"
+import { useEffect, useState } from "react";
+import { supabaseTransakcje } from "../api/supabaseClientTransakcje";
+import Link from "next/link";
 
-import Link from "next/link"
+const Tabela = () => {
+  const [konkurs_dane, setKonkursDane] = useState([]);
 
-export default async function Tabela() {
-  const konkurs = async () => {
-    try {
-      let { data, error } = await supabaseTransakcje.from("wyniki").select("*")
-      if (data) {
-        return data
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let { data, error } = await supabaseTransakcje.from("wyniki").select("*");
+        if (data) {
+          setKonkursDane(data);
+        }
+        console.log(data);
+      } catch (error) {
+        console.error(error);
       }
-      console.log(data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  const konkurs_dane = await konkurs()
-
+    };
+    
+    fetchData();
+  }, []); // Pusta tablica dependency sprawia, że useEffect uruchamia się tylko raz po zamontowaniu komponentu
+  
   // Sortowanie danych według procent_all (liczby zmiennoprzecinkowe)
-  konkurs_dane.sort((a, b) => b.procent_all - a.procent_all)
-
-  console.log(konkurs_dane)
-  // console.log(konkurs_dane)
-
+  konkurs_dane.sort((a, b) => b.procent_all - a.procent_all);
+  console.log(konkurs_dane);
+  
+  
   return (
     <>
       <div className="wrapper">
@@ -54,5 +59,7 @@ export default async function Tabela() {
         </table>
       </div>
     </>
-  )
-}
+  );
+};
+
+export default Tabela;

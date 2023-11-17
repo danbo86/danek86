@@ -37,7 +37,7 @@ const Tabela = () => {
 
 
   konkurs_dane.sort((a, b) => b.procent - a.procent)
-  console.log(konkurs_dane) 
+
  
 
 

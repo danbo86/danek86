@@ -1,5 +1,6 @@
 // import Tabela from "@/components/Tabela"
-import Tabela from "./Tabela.jsx"
+// import Tabela from "./Tabela.jsx"
+import Live from "./Live.jsx"
 
 
 export default function Blog() {
@@ -8,7 +9,8 @@ export default function Blog() {
       <h2 className="heading">
         Konkurs <span>Zello</span>
       </h2>
-      <Tabela />
+      {/* <Tabela /> */}
+      <Live/>
     </section>
   )
 }

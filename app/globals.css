@@ -761,8 +761,13 @@ span {
 /* ------------------------- kontakt ---------------------------------- */
 
 .contact {
-  /* min-height: auto; */
-  padding-bottom: 7rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  gap: 4rem;
+  padding-bottom: 6rem;
+  justify-content: center;
 }
 
 .contact form {
@@ -831,11 +836,18 @@ span {
 
 .kontakt-h3 {
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .qr-code {
   border-radius: 5px;
   border: 2px solid var(--main-color);
+  max-width: 388px;
+}
+
+.kontakt-zello {
+  padding: 1rem;
 }
 
 /* --------------------------------- footer ------------------------------------ */
@@ -909,7 +921,7 @@ span {
 .wrapper {
   width: min(900px, 100% - 3rem);
   margin-inline: auto;
-  font-size: 1.125rem;
+  font-size: 1.6rem;
   font-family:
     system-ui,
     -apple-system,
@@ -931,7 +943,6 @@ span {
 table {
   border-collapse: collapse;
   background: #323232;
-  font-size: 1.125rem;
   width: 100%;
 }
 
@@ -1000,6 +1011,10 @@ tr:nth-of-type(2n) {
   html {
     font-size: 55%;
   }
+
+  .qr-code {
+    max-width: 341px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1009,6 +1024,10 @@ tr:nth-of-type(2n) {
 
   section {
     padding: 10rem 4% 2rem;
+  }
+
+  .contact {
+    justify-content: center;
   }
 
   .home {

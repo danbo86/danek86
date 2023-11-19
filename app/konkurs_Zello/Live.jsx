@@ -59,7 +59,7 @@ const Tabela = () => {
                 <td data-cell="Nick">{item.nick}</td>
                 <td data-cell="Procent">{item.procent}</td>
                 <td data-cell="Link">
-                  <Link className="link-url" target="_blank" href={item.link}>
+                  <Link className="link-url" target="_blank" href={item.link ? item.link : ''}>
                     Forex Factory
                   </Link>
                 </td>

@@ -32,6 +32,7 @@ export default function Kontakt() {
                 required
                 minLength={3}
                 maxLength={200}
+                autoComplete="on"
               />
               <span className="focus"></span>
             </div>
@@ -51,7 +52,13 @@ export default function Kontakt() {
 
           <div className="input-box">
             <div className="input-field">
-              <input name="email" type="email" placeholder="Email" required />
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+                autoComplete="on"
+              />
               <span className="focus"></span>
             </div>
           </div>
@@ -90,7 +97,7 @@ export default function Kontakt() {
             // objectFit="contain" // Dostosuj objectFit do swoich preferencji
             alt="Zello QR Code"
             className="qr-code"
-            priority
+            priority={true}
           />
         </div>
         <div className="zello-box">

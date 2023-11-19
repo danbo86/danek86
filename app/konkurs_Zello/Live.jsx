@@ -10,7 +10,7 @@ const Tabela = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const rowNumber = [6, 17, 28, 34, 46]
+        const rowNumber = [6, 17, 28, 34, 46, 57]
 
         // const columnName = "4"
 
@@ -22,10 +22,10 @@ const Tabela = () => {
         if (data) {
           setKonkursDane(data)
           setKonkursDane((prevData) =>
-          [...prevData].sort(
-            (a, b) => parseFloat(b.procent) - parseFloat(a.procent)
+            [...prevData].sort(
+              (a, b) => parseFloat(b.procent) - parseFloat(a.procent),
+            ),
           )
-        );
         }
       } catch (error) {
         console.error(error)
@@ -35,13 +35,10 @@ const Tabela = () => {
     fetchData()
   }, []) // Pobierz dane ponownie, gdy zmienią się identyfikatory użytkowników
 
-
   konkurs_dane.sort((a, b) => b.procent - a.procent)
 
- 
+  console.log(konkurs_dane)
 
-
-  
   return (
     <>
       <div className="wrapper">

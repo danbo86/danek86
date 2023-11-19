@@ -87,9 +87,10 @@ export default function Kontakt() {
             layout="responsive" // Ustawienie na "responsive" zapewni responsywność
             width={100}
             height={100}
-            objectFit="contain" // Dostosuj objectFit do swoich preferencji
+            // objectFit="contain" // Dostosuj objectFit do swoich preferencji
             alt="Zello QR Code"
             className="qr-code"
+            priority
           />
         </div>
         <div className="zello-box">

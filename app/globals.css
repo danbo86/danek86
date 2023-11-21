@@ -1005,6 +1005,14 @@ tr:nth-of-type(2n) {
   color: var(--main-color);
 }
 
+.positive{
+  color: #00f018;
+}
+
+.negative{
+  color: red;
+}
+
 /* ----------------------------------------------------  breakpoints ----------------------------*/
 
 @media (max-width: 1200px) {

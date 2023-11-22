@@ -182,6 +182,29 @@ section {
   transform: rotate(-135deg);
 }
 
+.loading {
+  /* background: linear-gradient(to bottom right, rgb(65, 54, 65), cyan); */
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  height: 120px;
+  width: 120px;
+  border: 6px solid;
+  border-color: white transparent white transparent;
+  border-radius: 50%;
+  animation: spin 1.3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* -----------------------------------  Home ------------------------------ */
 
 .home {
@@ -1006,14 +1029,13 @@ tr:nth-of-type(2n) {
   color: var(--main-color);
 }
 
-.positive{
+.positive {
   color: #00f018;
 }
 
-.negative{
+.negative {
   color: red;
 }
-
 
 /* ----------------------------------------------------  breakpoints ----------------------------*/
 

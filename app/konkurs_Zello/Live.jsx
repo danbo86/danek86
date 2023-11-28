@@ -10,7 +10,7 @@ const Tabela = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const rowNumber = [6, 17, 28, 34, 46, 57, 68]
+        const rowNumber = [6, 17, 28, 34, 46, 57, 68, 73]
 
         // const columnName = "4"
 

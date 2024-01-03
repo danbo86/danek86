@@ -6,7 +6,7 @@ export default function Loading() {
       </h2>
       <div className="wrapper">
         <div className="loading">
-          <p className="spinner">ładowanie danych...</p>
+          <p className="spinner"></p>
         </div>
       </div>
     </section>

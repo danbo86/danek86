@@ -20,6 +20,8 @@ export default async function Dzienne() {
 
   const lastIndex = wyniki.dataDaily.length - 1
 
+  console.log( lastIndex)
+
   const stankonta = wyniki.dataDaily[lastIndex][0].balance
   const zyskdzisiaj = wyniki.dataDaily[lastIndex][0].profit
   const pipsy = wyniki.dataDaily[lastIndex][0].pips

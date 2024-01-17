@@ -54,6 +54,10 @@ section {
   padding: 10rem 9% 2rem;
 }
 
+p{
+  font-size: 1.6rem;
+}
+
 .img-gallery {
   width: 100%;
   height: auto;
@@ -940,6 +944,37 @@ span {
 }
 
 /* --------------------------------------- konkurs zello ------------------------------ */
+
+
+.konkurs{
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.konkurs p{
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+.konkurs ol{
+  font-size: 1.6rem;
+}
+
+.konkurs ol li {
+  margin-left: 1.5rem;
+}
+
+.konkurs a{
+  color: var(--main-color);
+}
+
+
+
+
 
 .wrapper {
   width: min(900px, 100% - 3rem);

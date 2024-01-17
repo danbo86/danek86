@@ -94,7 +94,7 @@ export default function Nav() {
           className={activeSection === "konkurs_Zello" ? "active" : ""}
           onClick={() => handleClick("konkurs_Zello")}
         >
-          Konkurs Zello
+          Konkurs-fx
         </Link>
       </nav>
     </header>

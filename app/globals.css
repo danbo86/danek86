@@ -369,8 +369,9 @@ p{
 .link-zello {
   z-index: 1;
   cursor: pointer;
-  height: 38pt;
-  width: 38pt;
+  height: 60pt;
+  width: 60pt;
+  position: relative;
 }
 
 .ikona-zello {

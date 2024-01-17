@@ -74,9 +74,9 @@ export default function Blog() {
               <div>
                 <h3>Terminy:</h3>
                 <p>
-                  Wyzwanie trwa od... do... wszystko zależy od Was. To czas, abyś mógł
-                  sprawdzić siebie i być może zdobyć miejsce wśród najlepszych
-                  traderów.
+                  Wyzwanie trwa od... do... wszystko zależy od Was. To czas,
+                  abyś mógł sprawdzić siebie i być może zdobyć miejsce wśród
+                  najlepszych traderów.
                 </p>
               </div>
 
@@ -88,8 +88,8 @@ export default function Blog() {
                   aby zgłosić swoje konto do udziału w wyzwaniu.
                 </p>
                 <p>
-                  Możesz także odezwać się na naszym kanale w aplikacji Zello. Link
-                  do kanału:{" "}
+                  Możesz także odezwać się na naszym kanale w aplikacji Zello.
+                  Link do kanału:{" "}
                   <a href="https://zello.com/trading_hydepark">
                     <img src="./icons/Link.png" />
                   </a>

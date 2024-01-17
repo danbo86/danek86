@@ -232,7 +232,7 @@ p{
   width: 18.8rem;
 }
 
-.home-content .text-animate h3 {
+.home-content .text-animate h2 {
   /* position: relative; */
   font-size: 3.2rem;
   font-weight: 700;
@@ -246,7 +246,7 @@ p{
   animation-delay: 2s;
 }
 
-.home-content .text-animate h3::before {
+.home-content .text-animate h2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -369,12 +369,14 @@ p{
 .link-zello {
   z-index: 1;
   cursor: pointer;
+  height: 38pt;
+  width: 38pt;
 }
 
 .ikona-zello {
   display: block;
-  height: 60pt;
-  width: 60pt;
+  /* height: 60pt; */
+  /* width: 60pt; */
   margin: 0;
 }
 

@@ -1,9 +1,6 @@
-
-
 import Link from "next/link"
-import Image from "next/image"
-// import { useState } from "react"
 
+// import { useState } from "react"
 export default function Home() {
   return (
     <>
@@ -42,7 +39,7 @@ export default function Home() {
                 className="link-zello"
                 target="_blank"
               >
-                <Image
+                <img
                   src="/icons/zello.png"
                   alt="logo-zello"
                   className="ikona-zello"
@@ -52,8 +49,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        
       </section>
     </>
   )

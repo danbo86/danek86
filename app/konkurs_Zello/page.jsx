@@ -91,7 +91,7 @@ export default function Blog() {
                   Możesz także odezwać się na naszym kanale w aplikacji Zello. Link
                   do kanału:{" "}
                   <a href="https://zello.com/trading_hydepark">
-                    <img src="./icons/link.png" />
+                    <img src="./icons/Link.png" />
                   </a>
                 </p>
               </div>

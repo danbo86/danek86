@@ -376,8 +376,8 @@ p{
 
 .ikona-zello {
   display: block;
-  /* height: 60pt; */
-  /* width: 60pt; */
+  height: 60pt;
+  width: 60pt;
   margin: 0;
 }
 

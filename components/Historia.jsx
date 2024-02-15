@@ -26,7 +26,7 @@ export default async function Historia() {
 
   const dataWejsciowa = historia.history.map((date) => date.closeTime)
 
-  console.log(dataWejsciowa)
+  // console.log(dataWejsciowa)
   const formattedDates = dataWejsciowa.map((inputDate) => {
     const [datePart, timePart] = inputDate.split(" ")
     const [month, day, year] = datePart.split("/")

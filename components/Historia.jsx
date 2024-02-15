@@ -80,7 +80,7 @@ export default async function Historia() {
               {transaction.action}
             </td>
             <td data-cell="Profit" className="historia_row">
-              {transaction.profit}
+              {transaction.profit} USD
             </td>
             <td data-cell="Data zamknięcia" className="historia_row">
               {formattedDates[index]}

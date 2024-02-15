@@ -70,7 +70,7 @@ export default async function Historia() {
       <tbody>
         {historia.history.map((transaction, index) => (
           <tr key={index}>
-             <td data-cell="Data zamknięcia" className="historia_row">
+             <td data-cell="Nr" className="historia_row">
               {index + 1}
             </td>
             <td data-cell="Symbol" className="historia_row">

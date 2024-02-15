@@ -2,6 +2,7 @@ import Podsumowanie from "../wyniki/podsumowanie.jsx"
 import Dzienne from "../wyniki/dzienne.jsx"
 import Widget from "@/components/Widget.jsx"
 import ListProfits from "@/components/ListProfits.jsx"
+import Historia from "../../components/Historia.jsx"
 
 export default function Wyniki() {
   return (
@@ -14,6 +15,7 @@ export default function Wyniki() {
         {<Podsumowanie />}
 
         {<Dzienne />}
+        {<Historia/>}
       </div>
 
       <div className="wyniki-row">

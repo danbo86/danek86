@@ -59,6 +59,8 @@ export default async function ListProfits() {
       return cumulativeProfit.toFixed(2)
     })
 
+   
+
     const sendProfity = async () => {
       try {
         const { data: profity, error } = await supabase
@@ -77,8 +79,8 @@ export default async function ListProfits() {
     sendProfity()
 
     // Wyświetlenie wyników
-    // console.log('Suma zysków i swapów:', summedData);
-    // console.log(skumulowaneProfity)
+    console.log('Suma zysków i swapów:', summedData);
+    console.log(skumulowaneProfity)
 
     return (
       <>

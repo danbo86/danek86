@@ -22,23 +22,22 @@ fs.readdir(folderPath, (err, files) => {
 })
 
 const images = [
-  '/gallery/1708560631072.jpg',
-  '/gallery/1708560644985.jpg',
-  '/gallery/1708560660753.jpg',
-  '/gallery/1708560682815.jpg',
-  '/gallery/1708560690224.jpg',
-  '/gallery/1708560702059.jpg',
-  '/gallery/1708560705809.jpg',
-  '/gallery/1708560710896.jpg',
-  '/gallery/1708560714083.jpg',
-  '/gallery/1708560718602.jpg',
-  '/gallery/1708560723176.jpg',
-  '/gallery/1708560733042.jpg',
-  '/gallery/1708560758977.jpg',
-  '/gallery/1708560770672.jpg',
-  '/gallery/1708560797762.jpg',
-  '/gallery/1708560809191.jpg',
-  '/gallery/1708560961815.jpg'
+  "/gallery/1708560631072.jpg",
+  "/gallery/1708560644985.jpg",
+  "/gallery/1708560660753.jpg",
+  "/gallery/1708560690224.jpg",
+  "/gallery/1708560702059.jpg",
+  "/gallery/1708560705809.jpg",
+  "/gallery/1708560710896.jpg",
+  "/gallery/1708560714083.jpg",
+  "/gallery/1708560718602.jpg",
+  "/gallery/1708560723176.jpg",
+  "/gallery/1708560733042.jpg",
+  "/gallery/1708560758977.jpg",
+  "/gallery/1708560770672.jpg",
+  "/gallery/1708560797762.jpg",
+  "/gallery/1708560809191.jpg",
+  "/gallery/1708560961815.jpg",
 ]
 
 function page() {

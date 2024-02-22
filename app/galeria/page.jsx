@@ -27,7 +27,6 @@ const images = [
   "/gallery/1708560631072.jpg",
   "/gallery/1708560644985.jpg",
   "/gallery/1708560660753.jpg",
-  "/gallery/1708560682815.jpg",
   "/gallery/1708560690224.jpg",
   "/gallery/1708560702059.jpg",
   "/gallery/1708560705809.jpg",

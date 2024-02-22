@@ -17,12 +17,13 @@ fs.readdir(folderPath, (err, files) => {
     return ["jpg", "jpeg", "png", "gif"].includes(extension)
   })
 
-  const imagess = imageFiles.map(file => `/gallery/${file}`);
+  const imagess = imageFiles.map((file) => `/gallery/${file}`)
   console.log(imagess)
-  
 })
 
 const images = [
+  '/gallery/1708560631072.jpg',
+  '/gallery/1708560644985.jpg',
   '/gallery/1708560660753.jpg',
   '/gallery/1708560682815.jpg',
   '/gallery/1708560690224.jpg',
@@ -32,6 +33,7 @@ const images = [
   '/gallery/1708560714083.jpg',
   '/gallery/1708560718602.jpg',
   '/gallery/1708560723176.jpg',
+  '/gallery/1708560733042.jpg',
   '/gallery/1708560758977.jpg',
   '/gallery/1708560770672.jpg',
   '/gallery/1708560797762.jpg',

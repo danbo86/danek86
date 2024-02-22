@@ -96,6 +96,13 @@ export default function Nav() {
         >
           Konkurs-fx
         </Link>
+        <Link
+          href="/galeria"
+          className={activeSection === "galeria" ? "active" : ""}
+          onClick={() => handleClick("galeria")}
+        >
+          Galeria
+        </Link>
       </nav>
     </header>
   )

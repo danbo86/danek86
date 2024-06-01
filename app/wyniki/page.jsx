@@ -3,6 +3,7 @@ import Dzienne from "../wyniki/dzienne.jsx"
 import Widget from "@/components/Widget.jsx"
 import ListProfits from "@/components/ListProfits.jsx"
 import Historia from "../../components/Historia.jsx"
+import Link from "next/link.js"
 
 export default function Wyniki() {
   return (
@@ -12,10 +13,11 @@ export default function Wyniki() {
       </h2>
 
       <div className="wyniki-row">
+        <div>
         {<Podsumowanie />}
-
         {<Dzienne />}
-        {<Historia/>}
+        </div>
+        {<Historia />}
       </div>
 
       <div className="wyniki-row">

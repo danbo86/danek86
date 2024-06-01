@@ -10,7 +10,7 @@ const inter = Poppins({
 
 export const metadata = {
   title: "Danbo86",
-  description: "forex trading, giełda, dźwignia finansowa",
+  description: "forex trading, giełda, dźwignia finansowa"
 }
 
 export default function RootLayout({ children }) {

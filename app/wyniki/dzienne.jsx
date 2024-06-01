@@ -45,9 +45,14 @@ export default async function Dzienne() {
 
   return (
     <div className="wyniki-column">
-      <h3 className="title">Podsumowanie dnia: {dataWyjsciowa}</h3>
+      <div className="title-div">
+        <h3 className="title">Podsumowanie dnia: {dataWyjsciowa}</h3>
+      </div>
 
-      <div className="wyniki-box" style={{marginTop: 41}} >
+      <div
+        className="wyniki-box"
+        //  style={{marginTop: 41}}
+      >
         <div className="wyniki-content">
           <div className="progres">
             <h3>

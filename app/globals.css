@@ -594,6 +594,12 @@ span {
 
 /* ------------------------------------- Wyniki ----------------------------- */
 
+.title-div {
+  display: block;
+  height: 70px;
+  padding: 15px 0;
+}
+
 .wyniki {
   /* min-height: auto; */
   padding-bottom: 7rem;

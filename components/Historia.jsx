@@ -101,7 +101,9 @@ export default async function Historia() {
 
   return (
     <div className="wyniki-column">
-      <h3 className="title">Ostatnie transakcje:</h3>
+      <div className="title-div">
+        <h3 className="title">Ostatnie transakcje:</h3>
+      </div>
 
       <div className="wyniki-box">
         <div className="wyniki-content">{TransactionTable()}</div>

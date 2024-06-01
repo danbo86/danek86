@@ -38,7 +38,11 @@ export default async function Podsumowanie() {
   return (
     <>
       <div className="wyniki-column">
-        <h3 className="title">Podsumowanie konta: {wyniki.accounts[1].name}</h3>
+        <div className="title-div">
+          <h3 className="title">
+            Podsumowanie konta: {wyniki.accounts[1].name}
+          </h3>
+        </div>
 
         <div className="wyniki-box">
           <div className="wyniki-content">

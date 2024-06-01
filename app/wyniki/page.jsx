@@ -13,7 +13,7 @@ export default function Wyniki() {
       </h2>
 
       <div className="wyniki-row">
-        <div>
+        <div className="tabelki2">
         {<Podsumowanie />}
         {<Dzienne />}
         </div>

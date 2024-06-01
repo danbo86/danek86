@@ -612,6 +612,7 @@ span {
 .wyniki-row .title {
   font-size: 2.5rem;
   margin: 0 0 1.5rem;
+  text-align: center;
 }
 
 .wyniki-box .wyniki-content {
@@ -619,6 +620,10 @@ span {
   border: 0.2rem solid var(--main-color);
   border-radius: 0.6rem;
   padding: 0.5rem 1.5rem;
+}
+
+.tabelki2 .wyniki-column {
+  margin-bottom: 10rem;
 }
 
 .wyniki-box .wyniki-content::before {
@@ -1219,6 +1224,14 @@ tr:nth-of-type(2n) {
   }
 }
 
+@media (min-width: 841px) {
+  .tabelki2 {
+    display: flex;
+
+    gap: 5rem;
+  }
+}
+
 /* Keyframes animation */
 
 @keyframes homeBgText {
@@ -1259,8 +1272,7 @@ tr:nth-of-type(2n) {
   }
 }
 
-
-.test{
+.test {
   position: fixed;
   z-index: 100;
   top: 50px;
@@ -1277,6 +1289,6 @@ tr:nth-of-type(2n) {
   border-radius: 5px;
 }
 
-.test:hover{
+.test:hover {
   scale: 110%;
 }

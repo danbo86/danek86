@@ -602,6 +602,7 @@ span {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
+  justify-content: center;
 }
 
 .wyniki-row .wyniki-column {

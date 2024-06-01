@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
     name: "Danbo86",
-    short_name: "Next.js App",
+    short_name: "Danbo86",
     description: "Next.js App",
     start_url: "/",
     display: "standalone",

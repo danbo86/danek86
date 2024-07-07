@@ -12,8 +12,8 @@ export const metadata = {
   title: "Danbo86",
   description: "forex trading, giełda, dźwignia finansowa",
   icons: {
-    icon: []
-  }
+    icon: [],
+  },
 }
 
 export default function RootLayout({ children }) {

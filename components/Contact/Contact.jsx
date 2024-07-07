@@ -41,7 +41,7 @@ const Contact = () => {
     if (messageSent) {
       const timer = setTimeout(() => {
         setMessageSent(false)
-      }, 60000) // 3 minutes in milliseconds
+      }, 60000) // 1 minutes in milliseconds
 
       // Cleanup timer if component unmounts
       return () => clearTimeout(timer)

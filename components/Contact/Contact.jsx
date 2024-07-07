@@ -1,61 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import './Contact.css';
+import React, { useState, useEffect } from "react"
+import "./Contact.css"
 
 const Contact = () => {
-  const [messageSent, setMessageSent] = useState(false);
+  const [messageSent, setMessageSent] = useState(false)
 
   const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+    event.preventDefault()
+    const formData = new FormData(event.target)
 
-    formData.append('access_key', '33ba92fa-beb6-479d-b9c0-64bde713b6bc');
+    formData.append("access_key", "33ba92fa-beb6-479d-b9c0-64bde713b6bc")
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    const object = Object.fromEntries(formData)
+    const json = JSON.stringify(object)
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: json,
-      });
+      })
 
-      const res = await response.json();
+      const res = await response.json()
 
       if (res.success) {
-        console.log('Success', res);
-        setMessageSent(true);
-        event.target.reset();  // Clear form fields
+        console.log("Success", res)
+        setMessageSent(true)
+        event.target.reset() // Clear form fields
       } else {
-        console.error('Failed', res);
+        console.error("Failed", res)
       }
     } catch (error) {
-      console.error('Error', error);
+      console.error("Error", error)
     }
-  };
+  }
 
   useEffect(() => {
     if (messageSent) {
       const timer = setTimeout(() => {
-        setMessageSent(false);
-      }, 180000); // 3 minutes in milliseconds
+        setMessageSent(false)
+      }, 60000) // 3 minutes in milliseconds
 
       // Cleanup timer if component unmounts
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer)
     }
-  }, [messageSent]);
+  }, [messageSent])
 
   return (
     <div className="contact">
       <form onSubmit={onSubmit}>
         <h2>Kontakt</h2>
         {messageSent && (
-          <div className="success-message">
-            Wiadomość została wysłana!
-          </div>
+          <div className="success-message">Wiadomość została wysłana!</div>
         )}
         <div className="input-box">
           <label htmlFor="name">Imię i Nazwisko</label>
@@ -94,7 +92,7 @@ const Contact = () => {
         </button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

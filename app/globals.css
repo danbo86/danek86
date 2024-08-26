@@ -987,6 +987,10 @@ span {
   color: var(--main-color);
 }
 
+.hover:hover{
+  color: var(--text-color);
+}
+
 .wrapper {
   width: min(900px, 100% - 3rem);
   margin-inline: auto;

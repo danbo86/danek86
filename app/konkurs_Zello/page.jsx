@@ -84,8 +84,7 @@ export default function Blog() {
                 <h3>Jak dołączyć?</h3>
                 <p>
                   Aby zgłosić swoje konto do udziału w wyzwaniu, napisz do mnie
-                  w oplikacji Zello. W zakładce "kontakty" wyszukaj mój nick:
-                  danbo86 i dodaj mnie do kontaktów.{" "}
+                  w oplikacji Zello lub skorzystaj z zakładki <a href="/kontakt" className="hover">Kontakt</a>
                 </p>
                 <p>
                   Możesz także odezwać się na naszym kanale w aplikacji Zello.

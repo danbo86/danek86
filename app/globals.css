@@ -1107,6 +1107,53 @@ tr:nth-of-type(2n) {
   object-fit: contain;
 }
 
+/* ------------------------------ CZAT ------------------------------------------- */
+
+.chat-window {
+  width: 100%;
+  font-size: 2rem;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  overflow: hidden; /* Ukrywa pasek przewijania */
+  overflow-y: scroll;
+  background: white;
+  color: black;
+  height: 30vh;
+}
+
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* Przykład: bardzo lekki kolor */
+  border-radius: 10px;
+}
+
+.chat-message {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-message strong {
+  color: green;
+}
+
+.btn-czat {
+  cursor: pointer;
+  padding: 5px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  color: #fff;
+  background: #00abf0;
+}
+
+.p-warning {
+  color: red;
+}
+
 /* ----------------------------------------------------  breakpoints ----------------------------*/
 
 @media (max-width: 1200px) {

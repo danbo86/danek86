@@ -16,7 +16,8 @@ async function getPodsumowanie() {
 
 export default async function Podsumowanie() {
   const wyniki = await getPodsumowanie()
-  const stanKonta = wyniki.accounts[1].balance
+  // zmiana numeru w nawiasie kwadratowym zmienia konto z myfxbooka do wyświetlenia
+  const stanKonta = wyniki.accounts[2].balance
 
   // console.log(wyniki)
 
@@ -26,7 +27,7 @@ export default async function Podsumowanie() {
   const maksymalnaWartosc = 1000000
   const procent = obliczProcent(stanKonta, maksymalnaWartosc)
 
-  const dataWejsciowa = wyniki.accounts[1].lastUpdateDate
+  const dataWejsciowa = wyniki.accounts[2].lastUpdateDate
   // Rozdzielamy datę na części
   const [dataCzas, godzinaMinuta] = dataWejsciowa.split(" ")
   const [miesiac, dzien, rok] = dataCzas.split("/")
@@ -40,7 +41,7 @@ export default async function Podsumowanie() {
       <div className="wyniki-column">
         <div className="title-div">
           <h3 className="title">
-            Podsumowanie konta: {wyniki.accounts[1].name}
+            Podsumowanie konta: {wyniki.accounts[2].name}
           </h3>
         </div>
 
@@ -48,7 +49,7 @@ export default async function Podsumowanie() {
           <div className="wyniki-content">
             <div className="progres">
               <h3>
-                Stan konta <span>{wyniki.accounts[1].balance} USD</span>
+                Stan konta <span>{wyniki.accounts[2].balance} USD</span>
               </h3>
               <div className="wyniki-bar">
                 <span style={{ width: `${procent}%` }}></span>
@@ -57,7 +58,7 @@ export default async function Podsumowanie() {
 
             <div className="progres">
               <h3>
-                Stan konta equity <span>{wyniki.accounts[1].equity} USD</span>
+                Stan konta equity <span>{wyniki.accounts[2].equity} USD</span>
               </h3>
               <div className="wyniki-bar">
                 <span></span>
@@ -66,7 +67,7 @@ export default async function Podsumowanie() {
 
             <div className="progres">
               <h3>
-                Suma wpłat <span>{wyniki.accounts[1].deposits} USD</span>
+                Suma wpłat <span>{wyniki.accounts[2].deposits} USD</span>
               </h3>
               <div className="wyniki-bar">
                 <span></span>
@@ -75,7 +76,7 @@ export default async function Podsumowanie() {
 
             <div className="progres">
               <h3>
-                Suma wypłat <span>{wyniki.accounts[1].withdrawals} USD</span>
+                Suma wypłat <span>{wyniki.accounts[2].withdrawals} USD</span>
               </h3>
               <div className="wyniki-bar">
                 <span></span>
@@ -84,7 +85,7 @@ export default async function Podsumowanie() {
 
             <div className="progres">
               <h3>
-                Zysk % <span>{wyniki.accounts[1].absGain} %</span>
+                Zysk % <span>{wyniki.accounts[2].absGain} %</span>
               </h3>
               <div className="wyniki-bar">
                 <span></span>
@@ -93,7 +94,7 @@ export default async function Podsumowanie() {
 
             <div className="progres">
               <h3>
-                Zysk w Usd<span>{wyniki.accounts[1].profit} USD</span>
+                Zysk w Usd<span>{wyniki.accounts[2].profit} USD</span>
               </h3>
               <div className="wyniki-bar">
                 <span></span>

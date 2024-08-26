@@ -4,6 +4,7 @@ import Widget from "@/components/Widget.jsx"
 import ListProfits from "@/components/ListProfits.jsx"
 import Historia from "../../components/Historia.jsx"
 import Link from "next/link.js"
+import WidgetJadePoSwoje from "../../components/WidgetJadePoSwoje.jsx"
 
 export default function Wyniki() {
   return (
@@ -22,10 +23,11 @@ export default function Wyniki() {
 
       <div className="wyniki-row">
         <div className="wyniki-column">{<Widget />}</div>
+        <div className="wyniki-column">{<WidgetJadePoSwoje/>}</div>
       </div>
 
       <div className="wyniki-row">
-        <div className="wyniki-column">{<ListProfits />}</div>
+        {/* <div className="wyniki-column">{<ListProfits />}</div> */}
       </div>
     </section>
   )

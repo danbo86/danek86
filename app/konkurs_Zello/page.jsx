@@ -1,6 +1,6 @@
 import { Suspense } from "react"
-import Live from "./Live.jsx"
 import Loading from "@/app/konkurs_Zello/loading.js"
+import Live from "./Live.jsx"
 
 export default function Blog() {
   return (

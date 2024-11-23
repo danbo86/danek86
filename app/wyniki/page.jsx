@@ -22,7 +22,7 @@ export default function Wyniki() {
       </div>
 
       <div className="wyniki-row">
-        <div className="wyniki-column">{<Widget />}</div>
+        {/* <div className="wyniki-column">{<Widget />}</div> */}
         <div className="wyniki-column">{<WidgetJadePoSwoje/>}</div>
       </div>
 

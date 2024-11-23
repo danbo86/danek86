@@ -1,45 +1,58 @@
-"use client"
-import Link from "next/link"
-import React, { useState, useEffect } from "react"
+"use client";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 export default function Nav() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [scrolling, setScrolling] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
-  }
+    setMenuOpen(!menuOpen);
+  };
 
   const handleClick = (section) => {
-    setMenuOpen(!menuOpen)
-    handleSectionChange(section)
-  }
-  //  Funkcja do obsługi zmiany aktywnej sekcji i koloru active
+    setMenuOpen(false); // Zamknij menu po kliknięciu
+    handleSectionChange(section);
+  };
+
+  // Funkcja do obsługi zmiany aktywnej sekcji i koloru active
   const handleSectionChange = (section) => {
-    setActiveSection(section)
-  }
-  // setMenuOpen(!menuOpen)
+    setActiveSection(section);
+  };
 
   const handleClickreset = () => {
-    setMenuOpen(false)
-    handleSectionChange(section)
-  }
+    setMenuOpen(false);
+    setActiveSection("home"); // Przywracamy domyślną sekcję, np. "home"
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
-  const handleScroll = () => {
-    if (window.scrollY > 70) {
-      setScrolling(true)
+    // Ustawienie overflow na body w zależności od stanu menuOpen
+    if (menuOpen) {
+      // Ukrywa pasek przewijania na stronie
+      document.body.style.overflow = "hidden";
     } else {
-      setScrolling(false)
+      // Przywraca pasek przewijania, gdy menu jest zamknięte
+      document.body.style.overflow = "auto";
     }
-  }
+
+    // Funkcja do obsługi przewijania
+    const handleScroll = () => {
+      if (window.scrollY > 70) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    // Nasłuchujemy zdarzenia scroll
+    window.addEventListener("scroll", handleScroll);
+
+    // Sprzątanie po komponencie, usunięcie nasłuchiwacza
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [menuOpen]); // useEffect będzie uruchamiany tylko, gdy menuOpen się zmienia
 
   return (
     <header className={`header ${scrolling ? "scroling" : ""}`} id="top">
@@ -53,14 +66,14 @@ export default function Nav() {
 
       <div
         className={`hamburger ${menuOpen ? "active" : ""}`}
-        onClick={handleClick}
+        onClick={toggleMenu}
       >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
 
-      <nav className={`navbar ${menuOpen ? "active-mb-menu" : ""}`}>
+      <nav className={`navbar ${menuOpen ? "active-mb-menu no-scroll" : ""}`}>
         <Link
           href="/omnie"
           className={activeSection === "omnie" ? "active" : ""}
@@ -105,5 +118,5 @@ export default function Nav() {
         </Link>
       </nav>
     </header>
-  )
+  );
 }

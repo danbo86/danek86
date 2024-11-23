@@ -49,6 +49,11 @@ body::before {
   opacity: 0.2;
 }
 
+/* globals.css */
+
+
+
+
 section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
@@ -804,6 +809,34 @@ span {
   color: #00ff00;
 }
 
+::-webkit-scrollbar {
+  width: 12px; /* Szerokość suwaka */
+  background-color: var(--second-bg-color); /* Tło suwaka */
+}
+
+/* Tło kanału suwaka */
+::-webkit-scrollbar-track {
+  background-color: var(--second-bg-color);
+  border-radius: 10px;
+}
+
+/* Rączka (thumb) suwaka */
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  border: 2px solid var(--second-bg-color); /* Obramowanie pasujące do tła */
+}
+
+/* Hover na rączkę suwaka */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color3);
+}
+
+/* Opcjonalnie: zmiana koloru przy aktywnym scrollowaniu */
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--wykres);
+}
+
 /* ------------------------- kontakt ---------------------------------- */
 
 .contact {
@@ -1224,6 +1257,7 @@ tr:nth-of-type(2n) {
 
   .navbar.active-mb-menu {
     left: 0;
+    overflow: hidden;
   }
 
   .navbar a {

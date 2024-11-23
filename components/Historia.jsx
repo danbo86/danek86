@@ -57,38 +57,46 @@ export default async function Historia() {
   //   console.log(formattedDates)
 
   const TransactionTable = () => (
-    <table>
-      <thead>
-        <tr>
-          <th>Nr</th>
-          <th>Symbol</th>
-          <th>BUY/SEL</th>
-          <th>Profit</th>
-          <th>Data zamknięcia</th>
-        </tr>
-      </thead>
-      <tbody>
-        {historia.history.map((transaction, index) => (
-          <tr key={index}>
-            <td data-cell="Nr" className="historia_row">
-              {index + 1}
-            </td>
-            <td data-cell="Symbol" className="historia_row">
-              {transaction.symbol}
-            </td>
-            <td data-cell="Buy/sell" className="historia_row">
-              {transaction.action}
-            </td>
-            <td data-cell="Profit" className="historia_row">
-              {transaction.profit} USD
-            </td>
-            <td data-cell="Data zamknięcia" className="historia_row">
-              {formattedDates[index]}
-            </td>
+    <div  className="historia-container"
+    style={{
+      flex: "1 1 auto",
+      overflowY: "scroll",
+      maxHeight: "50vh",
+      padding: "10px"
+    }}>
+      <table>
+        <thead>
+          <tr>
+            <th>Nr</th>
+            <th>Symbol</th>
+            <th>BUY/SEL</th>
+            <th>Profit</th>
+            <th>Data zamknięcia</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {historia.history.map((transaction, index) => (
+            <tr key={index}>
+              <td data-cell="Nr" className="historia_row">
+                {index + 1}
+              </td>
+              <td data-cell="Symbol" className="historia_row">
+                {transaction.symbol}
+              </td>
+              <td data-cell="Buy/sell" className="historia_row">
+                {transaction.action}
+              </td>
+              <td data-cell="Profit" className="historia_row">
+                {transaction.profit} USD
+              </td>
+              <td data-cell="Data zamknięcia" className="historia_row">
+                {formattedDates[index]}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 
   // const lastIndex = historia.dataDaily.length - 1

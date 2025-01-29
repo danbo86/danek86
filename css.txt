@@ -1,0 +1,112 @@
+html
+{
+    animation: hues 30s linear forwards infinite;
+}
+@keyframes hues
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    13%
+    {
+        filter: hue-rotate(0deg);
+    }
+    20%
+    {
+        filter: hue-rotate(30deg);
+    }
+    33%
+    {
+        filter: hue-rotate(30deg);
+    }
+    40%
+    {
+        filter: hue-rotate(180deg);
+    }
+    53%
+    {
+        filter: hue-rotate(180deg);
+    }
+    60%
+    {
+        filter: hue-rotate(120deg);
+    }
+    73%
+    {
+        filter: hue-rotate(120deg);
+    }
+    80%
+    {
+        filter: hue-rotate(275deg);
+    }
+    93%
+    {
+        filter: hue-rotate(275deg);
+    }
+    100%
+    {
+        filter: hue-rotate(0deg);
+    }
+}
+
+
+
+
+.box-grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 50%;
+    left: 0%;
+    padding: 0px 10%;
+    transform: translateY(-50%);
+}
+
+.home-circle {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.home-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 70px #23ff8f79, 0px 0px 15px #23ff8f79, inset 5px 0px 5px #0bda67, inset 5px 0px 10px 3px #0bda67, inset -5px -5px 5px rgba(0, 0, 0, 0.5), inset 30px 10px 35px 5px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 72%;
+    height: 85%;
+    animation: roti 20s linear forwards infinite;
+}
+
+<div class="box-grid">
+            <div class="title">
+                <h1><span>Ai</span> Payment Generation</h1>
+                <p>Our team of experts uses a methodology to identify the credit cards most likely to fit your needs.
+                    we examine anual percentage rates, anual fees.</p>
+            </div>
+            <div class="home-circle">
+                <div class="center">
+                    <div class="aisa1"></div>
+                    <div class="aisa2"></div>
+                    <div class="aisa3"></div>
+                    <div class="aisa4"></div>
+                </div>
+            </div>
+        </div>

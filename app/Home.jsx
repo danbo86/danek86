@@ -8,7 +8,7 @@ export default function Home() {
         <div className="home-content">
           <h1>
             Cześć, <br />
-            nazywam się <span>Danbo86</span>
+            nazywam się <span>Danbo86xfdg</span>
           </h1>
 
           <div className="text-animate">
@@ -48,6 +48,9 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+        <div className="home-circle">
+          <p>Jestem tutaj</p>
         </div>
       </section>
     </>

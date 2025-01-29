@@ -8,7 +8,7 @@ export default function Home() {
         <div className="home-content">
           <h1>
             Cześć, <br />
-            nazywam się <span>Danbo86xfdg</span>
+            nazywam się <span>Danbo86</span>
           </h1>
 
           <div className="text-animate">
